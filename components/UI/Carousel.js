@@ -128,7 +128,7 @@ export default function Carousel({children,
                     <div className={"overflow-x-hidden overflow-y-auto scrollbar-hide flex items-center absolute bottom-2 left-1/2 h-6 transform -translate-x-1/2"}>
                         {children.map((e, k)=>{
                             return(
-                                <div className={classNames("h-3 w-3 rounded-full bg-gray-800 mx-3", k === currentSlideNumber && "transform scale-125")}>
+                                <div key={k} className={classNames("h-3 w-3 rounded-full bg-gray-800 mx-3", k === currentSlideNumber && "transform scale-125")}>
 
                                 </div>
                             )
