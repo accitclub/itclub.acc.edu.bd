@@ -19,7 +19,7 @@ export default function Footer() {
                             <Paragraph>
                                 {FOOTER_TEXT}
                             </Paragraph>
-                            <Content className={"flex mt-4 flex-row md:justify-start justify-center"}>
+                            <Content className={"flex mt-4 flex-row md:justify-start justify-center flex-wrap"}>
                                 {SocialLinksJSXList.map((item, key) =>
                                     <a key={key} name={item.name} title={item.name} href={item.link}
                                        className={classNames("h-8 w-8 hover:bg-sky-100 bg-gray-100 rounded-full grid place-items-center md:mr-4 md:mx-0 mx-auto md:text-3x text-lg ", item.className)}>
@@ -31,7 +31,7 @@ export default function Footer() {
                     </Column>
                     <Column className={"justify-self-center"}>
                         <h2 className={"text-2xl md:text-left text-center"}>Quick Links</h2>
-                        <Content className={"flex md:flex-col flex-row md:justify-start justify-center mt-4"}>
+                        <Content className={"flex md:flex-col flex-row md:justify-start justify-center mt-4 flex-wrap"}>
 
                             {
                                 NAVIGATION.map((each, key) => (
@@ -50,7 +50,7 @@ export default function Footer() {
                             {
                                 CONTACTS.map((each, key) => (
                                     <p key={key}
-                                       className={"text-lg  no-underline md:mx-0 md:mr-2 md:p-0 px-2 mx-auto text-gray-700 hover:text-blue-500"}>
+                                       className={"md:text-left text-center text-lg  no-underline md:mx-0 md:mr-2 md:p-0 px-2 mx-auto text-gray-700 hover:text-blue-500"}>
                                         {each}
                                     </p>
                                 ))
