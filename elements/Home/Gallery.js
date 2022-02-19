@@ -1,7 +1,7 @@
 import {useRef} from "react";
 import {Container, Section} from "../../components/UI/Containers";
 import {Wave} from "../../components/UI/Images";
-import {IconHeading, ResponsiveTextLeft, Text} from "../../components/UI/Typography";
+import {IconHeading, Paragraph, ResponsiveTextLeft, Text} from "../../components/UI/Typography";
 import {GallerySlides} from "../../components/UI/Slide";
 import {FaImages} from "react-icons/fa";
 import {GALLERY_HEADER, GALLERY_ID, GALLERY_SUB_TEXT, SLIDES} from "../../assets/data";
@@ -16,12 +16,12 @@ export default function Gallery() {
             <Section className={"bg-bgLight"}>
                 <Container className={"pb-0"}>
                     <ResponsiveTextLeft className={"py-0"}>
-                        <IconHeading prefix={<FaImages/>}>
+                        <IconHeading className={"md:justify-start justify-center"} prefix={<FaImages/>}>
                             {GALLERY_HEADER}
                         </IconHeading>
-                        <Text className={"xl:mt-4 lg:mt-4 md:mt-3 mt-3"}>
+                        <Paragraph className={"xl:mt-4 lg:mt-4 md:mt-3 mt-3"}>
                             {GALLERY_SUB_TEXT}
-                        </Text>
+                        </Paragraph>
                     </ResponsiveTextLeft>
                 </Container>
                 <Section className={"md:py-10 py-4"}>

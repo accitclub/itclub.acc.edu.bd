@@ -2,7 +2,7 @@ import classNames from "classnames";
 
 export function Container({children, className, ...props}){
     return(
-        <div className={classNames("container mx-auto py-10", className)} {...props}>
+        <div className={classNames("container mx-auto py-16", className)} {...props}>
             {children}
         </div>
     )

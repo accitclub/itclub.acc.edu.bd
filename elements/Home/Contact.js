@@ -1,11 +1,17 @@
-import {FaCheck, FaCheckCircle, FaLinkedin, FaMailBulk, FaPaperPlane, FaPhone} from "react-icons/fa";
+import {FaCheck, FaCheckCircle, FaImages, FaLinkedin, FaMailBulk, FaPaperPlane, FaPhone} from "react-icons/fa";
 import {useEffect, useState} from "react";
 import {Center, Container, Content, Section} from "../../components/UI/Containers";
-import {Heading, Paragraph, Text} from "../../components/UI/Typography";
+import {Heading, IconHeading, Paragraph, Text} from "../../components/UI/Typography";
 import {Button, Spinner} from "../../components/UI/Button";
 import {Form, FormControl, Input, Label, TextArea} from "../../components/UI/form";
 import {EMAIL} from "../../assets/data/SocialLinks";
-import {CONTACT_ID, CONTACT_US_FORM_HEADER, CONTACT_US_FORM_PARAGRAPH, CONTACT_US_HEADER} from "../../assets/data";
+import {
+    CONTACT_ID,
+    CONTACT_US_FORM_HEADER,
+    CONTACT_US_FORM_PARAGRAPH,
+    CONTACT_US_HEADER,
+    GALLERY_HEADER
+} from "../../assets/data";
 
 const ContactLinks = () =>
     <div className={"grid grid-cols-3 gap-1 "}>
@@ -107,9 +113,9 @@ export default function Contact(){
         <Section id={CONTACT_ID}>
             <Container>
                 <Center>
-                    <Heading>
+                    <IconHeading className={"md:justify-start justify-center"} iconClassName={"bg-indigo-500 text-white"} prefix={<FaPhone/>}>
                         {CONTACT_US_HEADER}
-                    </Heading>
+                    </IconHeading>
                 </Center>
                 <div className={"grid md:grid-cols-5 grid-cols-1 mt-20 z-20  bg-gray-200 rounded-2xl z-20"}>
                     <div className={"col-span-2 z-20 md:px-4 md:py-20 px-2 py-8 lg:w-9/12 md:w-full w-11/12 mx-auto "}>

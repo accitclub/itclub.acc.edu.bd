@@ -17,10 +17,9 @@ export default function Testimony() {
         <Section id={TESTIMONIAL_ID} className={"bg-bgDark -mt-2"}>
             <Content className={"container mx-auto py-16"}>
                 <ResponsiveTextLeft className={"lg:text-left text-center"}>
-                    <IconHeading prefix={<FaUserFriends/>}>
+                    <IconHeading className={"md:justify-start justify-center"} prefix={<FaUserFriends/>}>
                         {TESTIMONIAL_CONTENT_HEADING}
                     </IconHeading>
-
                 </ResponsiveTextLeft>
                 <GridResponsive className={"lg:grid-cols-2 md:grid-cols-1 mt-32 gap-y-16"}>
                     <Column>
@@ -41,10 +40,10 @@ export default function Testimony() {
                                             <Content className={"bg-gray-500 -mt-1 rounded-3xl"}>
                                                 <Wave className={"text-bgLight "}/>
                                                 <Center className={"py-10 px-8"}>
-                                                    <Content className={"h-28 w-28 bg-gray-200 rounded-full"}>
+                                                    <Content className={"md:h-28 md:w-28 h-24 w-24 bg-gray-200 rounded-full"}>
                                                         {item.image && <Img src={item.image}/>}
                                                     </Content>
-                                                    <p className={"text-gray-100 font-semibold text-2xl mt-2"}>{item.name}</p>
+                                                    <p className={"text-center text-gray-100 font-semibold md:text-2xl text-xl mt-2"}>{item.name}</p>
                                                 </Center>
                                             </Content>
                                         </Content>
