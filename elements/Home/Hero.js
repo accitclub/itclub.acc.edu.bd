@@ -1,7 +1,7 @@
 import HeroImage from "../../assets/images/hero.png";
 import {HERO_ID, HERO_TEXT, HERO_TITLE_1, HERO_TITLE_2} from "../../assets/data";
 import {Content, FlexRow, Main, Relative, Section} from "../../components/UI/Containers";
-import {Image, Wave} from "../../components/UI/Images";
+import {Img, NextImage, Wave} from "../../components/UI/Images";
 import {Heading, ResponsiveTextLeft, Text} from "../../components/UI/Typography";
 import {AnchorButton} from "../../components/UI/Button";
 
@@ -35,8 +35,8 @@ export default function Hero() {
                             </Relative>
                         </Relative>
                         <Content className="lg:absolute lg:inset-y-0 lg:right-0 xl:w-1/2 lg:w-3/6  overflow-visible order-1">
-                            <Image className="lg:w-full overflow-visible"
-                                   src={HeroImage.src}
+                            <NextImage className="lg:w-full overflow-visible"
+                                 src={HeroImage}
                             />
                         </Content>
                     </Relative>

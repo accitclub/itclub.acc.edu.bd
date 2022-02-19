@@ -1,6 +1,14 @@
 import logo from "../../assets/images/logo.png"
+import Image from "next/image";
 
-export function Image({...props}){
+export function NextImage({...props}){
+    return(
+        <Image {...props} alt="Web Image"/>
+    )
+}
+
+
+export function Img({...props}){
     return(
         <img {...props} alt="Web Image"/>
     )
@@ -19,7 +27,7 @@ export function Wave({fill,className, ...props}){
 export default function Logo(){
     return(
         <div className={"h-12 w-12 rounded-full bg-white overflow-hidden grid place-items-center"}>
-            <Image src={logo.src} className={'w-full object-cover'}/>
+            <Img src={logo.src} className={'w-full object-cover'}/>
         </div>
     )
 }

@@ -140,7 +140,7 @@ export default function Carousel({children,
     )
 }
 
-Carousel.Slide = function ({children, ...props}){
+export function CarouselSlide({children, ...props}){
     return(
         <li className={"carousel-slide"}>
 

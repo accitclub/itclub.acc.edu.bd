@@ -11,7 +11,7 @@ import AboutImage1 from "../../assets/images/about_image1.png";
 import AboutImage2 from "../../assets/images/about_image2.png";
 import AboutImage3 from "../../assets/images/about_image3.png";
 import {CenterText, Heading, SubHeading, Text, TitleHR, VerticalWatermark} from "../../components/UI/Typography";
-import {Image, Wave} from "../../components/UI/Images";
+import {Img, NextImage, Wave} from "../../components/UI/Images";
 import {Center, Container, Content, GridResponsive, Relative, Section} from "../../components/UI/Containers";
 
 export default function About() {
@@ -37,12 +37,12 @@ export default function About() {
                                 </Center>
                             </Relative>
                             <Content>
-                                <Image className={"mx-auto h-96"} src={AboutImage1.src}/>
+                                <NextImage className={"mx-auto h-96"} src={AboutImage1}/>
                             </Content>
                         </GridResponsive>
                         <GridResponsive className={"md:mt-0 mt-10"}>
                             <Content className={"md:order-1 order-2"}>
-                                <Image className={"mx-auto h-96 my-auto"} src={AboutImage3.src}/>
+                                <NextImage className={"mx-auto h-96 my-auto"} src={AboutImage3}/>
                             </Content>
                             <Content className={"my-auto md:order-2 order-1 md:text-left text-center"}>
                                 <Content>
@@ -67,7 +67,7 @@ export default function About() {
                                 </Content>
                             </Content>
                             <Content>
-                                <Image className={"mx-auto h-96 my-auto"} src={AboutImage2.src} alt=""/>
+                                <NextImage className={"mx-auto h-96 my-auto"} src={AboutImage2} alt=""/>
                             </Content>
                         </GridResponsive>
                     </Container>

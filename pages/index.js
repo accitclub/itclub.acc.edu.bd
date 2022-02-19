@@ -15,7 +15,8 @@ export default function Home() {
     <>
       <HTMLHead/>
       <Navbar/>
-      <main className={"snap-y snap-center snap-proximity lg:pt-0 pt-10"}>
+      <main className={"lg:pt-0 pt-10"}>
+
         <Hero/>
         <About/>
         <Sectors/>
