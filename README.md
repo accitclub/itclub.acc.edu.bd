@@ -1,4 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div style="text-align: center; font-size: 2rem; font-weight: bolder">
+Adamjee Cantonment College IT CLUB Portfolio
+</div> 
+
+<div style="text-align:center;">
+  <img height="100" src="https://res.cloudinary.com/dmfkgmd14/image/upload/v1645290271/logo_r1kbq7.png"  alt="LOGO"/>
+</div>
+
+## Used Frameworks
+
+1. NextJS
+2. TailwindCSS
+3. HammerJS
+4. React Icons
+
+
+## File Structure
+
+1. `Assets`
+Images and Text data folder
+2. `Components`UI Components. Higher Order Functions
+3. `Elements` Page Sections as Component/Container
+4. `Hooks` React hooks
+5. `Pages` Index, other pages
+6. `public` NextJS Public Folder
+7. `styles` Stylesheet
 
 ## Getting Started
 
@@ -12,23 +37,15 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
+## Learn More About NextJS
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Note:
+1. Do not use this for commercial purpose without permission
+2. This is a club community website, anyone can contribute to this repo
+3. You can use this repo for testing purpose, feel free to leave a feedback
