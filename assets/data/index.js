@@ -1,5 +1,12 @@
 // All IDS
 import {FaArtstation, FaBrain, FaCode, FaMobile, FaProjectDiagram, FaVideo} from "react-icons/fa";
+import Image1 from "../images/image1.jpg";
+import Image2 from "../images/image2.jpg";
+import Image3 from "../images/image3.jpg";
+import Image4 from "../images/image4.jpg";
+import Image5 from "../images/image5.jpg";
+import Image6 from "../images/image6.jpg";
+import Image7 from "../images/image7.jpg";
 
 export const HERO_ID = "hero";
 export const ABOUT_ID = "about";
@@ -30,16 +37,16 @@ export const ABOUT_HEADING = "About Us"
 export const ABOUT_SUB_HEADING = "Some beautiful text for a small title"
 
 export const ABOUT_CONTENT_HEADING_1 = "What We Do"
-export const ABOUT_CONTENT_TEXT_1 = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
+export const ABOUT_CONTENT_TEXT_1 = "\"ACC IT CLUB\" is a student body that inspire and empower students of Adamjee Cantonment College to be involved in IT related tasks and knowledge sharing. This also applies to expand their knowledge about Information and Technology. This club will also have been organizing many IT related events in Adamjee Cantonment College and has participated to different IT related programs to other institutions for expressing these motives more clearly and also imparting inspiration and knowledge along with potential of IT."
 
 export const ABOUT_CONTENT_HEADING_2 = "What We Do"
-export const ABOUT_CONTENT_TEXT_2 = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
+export const ABOUT_CONTENT_TEXT_2 = "This club will also organize many IT related events in Adamjee Cantonment College for expressing these motives more clearly and also imparting inspiration and knowledge along with potential of IT. It will also make use of the potential Adamjee Cantonment College students have in IT related fields."
 
 // Sector Section Content
 
 export const SECTOR_CONTENT_HEADING = "Sector"
 export const SECTOR_WATERMARK = "SECTORS"
-export const SECTOR_CONTENT_TEXT = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
+export const SECTOR_CONTENT_TEXT = "This club will also organize many IT related events in Adamjee Cantonment College for expressing these motives more clearly and also imparting inspiration and knowledge along with potential of IT. It will also make use of the potential Adamjee Cantonment College students have in IT related fields."
 
 export const SECTOR_LIST = [
     {
@@ -115,36 +122,39 @@ export const GALLERY_SUB_TEXT = "Welcome To Our Gallery"
 
 export const SLIDES = [
     {
-        title: "Machu Picchu",
-        subtitle: "Peru",
-        description: "Adventure is never far away",
-        image: "https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+        title: "One",
+        image: Image1.src
     },
     {
-        title: "Chamonix",
-        subtitle: "France",
-        description: "Let your dreams come true",
-        image: "https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+        title: "Two",
+        description: "",
+        image: Image2.src
     },
     {
-        title: "Mimisa Rocks",
-        subtitle: "Australia",
-        description: "A piece of heaven",
-        image:
-            "https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+        title: "Three",
+        description: "",
+        image: Image3.src
     },
     {
         title: "Four",
-        subtitle: "Australia",
-        description: "A piece of heaven",
-        image: "https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+        description: "",
+        image: Image4.src
     },
     {
         title: "Five",
-        subtitle: "Australia",
-        description: "A piece of heaven",
-        image: "https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-    }
+        description: "",
+        image: Image5.src
+    },
+    {
+        title: "Five",
+        description: "",
+        image: Image6.src
+    },
+    {
+        title: "Five",
+        description: "",
+        image: Image7.src
+    },
 ];
 
 

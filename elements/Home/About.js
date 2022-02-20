@@ -20,7 +20,7 @@ import {
     TitleHR,
     VerticalWatermark
 } from "../../components/UI/Typography";
-import {Img, NextImage, Wave} from "../../components/UI/Images";
+import {NextImage, Wave} from "../../components/UI/Images";
 import {Center, Container, Content, GridResponsive, Relative, Section} from "../../components/UI/Containers";
 
 export default function About() {
@@ -49,7 +49,7 @@ export default function About() {
                                 <NextImage className={"mx-auto h-96"} src={AboutImage1}/>
                             </Content>
                         </GridResponsive>
-                        <GridResponsive className={"md:mt-0 mt-10"}>
+                        <GridResponsive className={"md:mt-0 mt-10 lg:gap-x-10 md:gap-x-2"}>
                             <Content className={"md:order-1 order-2"}>
                                 <NextImage className={"mx-auto h-96 my-auto"} src={AboutImage3}/>
                             </Content>
@@ -64,7 +64,7 @@ export default function About() {
                                 </Content>
                             </Content>
                         </GridResponsive>
-                        <GridResponsive className={"md:mt-0 mt-10"}>
+                        <GridResponsive className={"md:mt-0 mt-10 lg:gap-x-10 md:gap-x-2"}>
                             <Content className={"my-auto mx-auto  md:text-right text-center"}>
                                 <Content>
                                     <Heading>
