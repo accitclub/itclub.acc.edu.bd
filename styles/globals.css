@@ -5,10 +5,11 @@
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   scroll-padding: 5rem;
+
 }
 
 body, html {
-  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 }
 
 a, button{

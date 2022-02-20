@@ -18,9 +18,9 @@ module.exports = {
         secondary: "#8eee9b",
         clrHeading: "#111827",
         clrsSubheading: "",
-        clrText: "#6b7280",
-        bgDark: "#D9E8F4",
-        bgLight: "#cedfed",
+        clrText: "#5c5e62",
+        bgDark: "#eeebf2",
+        bgLight: "#f1f1f2",
       }
     },
   },

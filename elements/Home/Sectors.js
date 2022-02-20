@@ -29,9 +29,12 @@ export default function Sectors() {
                                         <Heading>
                                             {SECTOR_CONTENT_HEADING}
                                         </Heading>
-                                        <Text className={"xl:mt-48 lg:mt-36 md:mt-32"}>
+                                        <Text className={"xl:mt-20 lg:mt-20 md:mt-20"}>
                                             {SECTOR_CONTENT_TEXT}
                                         </Text>
+                                        <Content className={"grid"}>
+
+                                        </Content>
                                     </ResponsiveTextLeft>
                                 </Relative>
                             </Content>

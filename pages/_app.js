@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import "../styles/carousel3d.css";
+import "../styles/slide.css";
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
