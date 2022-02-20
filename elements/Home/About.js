@@ -10,7 +10,16 @@ import {
 import AboutImage1 from "../../assets/images/about_image1.png";
 import AboutImage2 from "../../assets/images/about_image2.png";
 import AboutImage3 from "../../assets/images/about_image3.png";
-import {CenterText, Heading, SubHeading, Text, TitleHR, VerticalWatermark} from "../../components/UI/Typography";
+import {
+    CenterText,
+    defaultTextMargin,
+    Heading,
+    P,
+    SubHeading,
+    Text,
+    TitleHR,
+    VerticalWatermark
+} from "../../components/UI/Typography";
 import {Img, NextImage, Wave} from "../../components/UI/Images";
 import {Center, Container, Content, GridResponsive, Relative, Section} from "../../components/UI/Containers";
 
@@ -64,6 +73,34 @@ export default function About() {
                                     <Text>
                                         {ABOUT_CONTENT_TEXT_2}
                                     </Text>
+                                    <Content className={"flex justify-between flex-wrap "+ defaultTextMargin()}>
+                                        <Content className={"px-4 items-center text-center bg-emerald-500 xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
+                                            <P className={"text-gray-100 lg:text-lg"}>
+                                                Members
+                                            </P>
+                                            <P className={"text-white font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
+                                                100+
+                                            </P>
+                                        </Content>
+
+                                        <Content className={"px-4 items-center text-center  bg-sky-500 xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
+                                            <P className={"text-gray-100 lg:text-lg"}>
+                                                Executive
+                                            </P>
+                                            <P className={"text-white font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
+                                                12+
+                                            </P>
+                                        </Content>
+
+                                        <Content className={"px-4 items-center text-center  bg-orange-400 xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
+                                            <P className={"text-gray-100 lg:text-lg"}>
+                                                Fests
+                                            </P>
+                                            <P className={"text-white font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
+                                                10+
+                                            </P>
+                                        </Content>
+                                    </Content>
                                 </Content>
                             </Content>
                             <Content>

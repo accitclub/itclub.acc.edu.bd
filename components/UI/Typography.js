@@ -33,11 +33,19 @@ export function SubHeading({children, className, prefix, ...props}){
 export function defaultTextMargin(){
     return "mt-3 lg:mx-0 sm:mt-10 sm:mx-auto md:mt-10 md:mt-16 xl:mt-20"
 }
+export function P({children, className, prefix,  ...props}){
+    return(
+        <p {...props} className={classNames('mt-4 sm:mt-4', className)}>
+            {prefix}
+            {children}
+        </p>
+    )
+}
 
-export function Text({children, className, prefix,  ...props}){
+export function Text({children, className, prefix, overrideColor,  ...props}){
     // More Margin Top
     return(
-        <p {...props} className={classNames("text-base text-clrText sm:text-lg sm:max-w-xl md:text-xl", defaultTextMargin(), className)}>
+        <p {...props} className={classNames("text-base sm:text-lg sm:max-w-xl md:text-xl", defaultTextMargin(), !overrideColor && 'overrideColor', className)}>
             {prefix}
             {children}
         </p>
@@ -48,12 +56,14 @@ export function Text({children, className, prefix,  ...props}){
 export function Paragraph({children, className, prefix,  ...props}){
     // Less Margin Top
     return(
-        <p {...props} className={classNames("text-base text-clrText sm:text-lg md:text-xl", 'mt-4 sm:mt-4', className)}>
+        <P {...props} className={classNames("text-base text-clrText sm:text-lg md:text-xl", 'mt-4 sm:mt-4', className)}>
             {prefix}
             {children}
-        </p>
+        </P>
     )
 }
+
+
 
 export function CenterText({children, className, prefix,  ...props}){
     return(

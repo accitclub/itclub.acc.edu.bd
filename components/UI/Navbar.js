@@ -13,28 +13,18 @@ function classNames(...classes) {
 
 
 export default function Navbar() {
-    const [navBg, setNavBg] = useState("lg:bg-transparent");
+    const [navBg, setNavBg] = useState(false);
     const [scrollTopBtn, setScrollTopBtn] = useState("invisible");
     useEffect(()=>{
         document.onscroll = function (){
-            if(document.scrollingElement.scrollTop > 50){
-                setNavBg("lg:bg-bgDark")
-
-            }else{
-                setNavBg("lg:bg-transparent")
-            }
-
-            if(document.scrollingElement.scrollTop > 300){
-                setScrollTopBtn("visible")
-            }else{
-                setScrollTopBtn("invisible")
-            }
+            setNavBg(document.scrollingElement.scrollTop > 50)
+            setScrollTopBtn(document.scrollingElement.scrollTop > 300 ? "visible": "invisible")
         }
     }, [])
     return (
         <>
             <ToTopButton className={scrollTopBtn} href={"#"+HERO_ID}/>
-            <Disclosure as="nav" className={classNames("transition-all bg-bgDark fixed w-screen z-50", navBg)}>
+            <Disclosure as="nav" className={classNames("transition-all bg-bgDark fixed w-screen z-50", navBg ? "lg:bg-bgDark": "lg:bg-transparent")}>
                 {({open}) => (
                     <>
                         <div className="max-w-7xl mx-auto px-2 md:px-6 lg:px-8">
@@ -62,8 +52,9 @@ export default function Navbar() {
                                                     key={item.name}
                                                     href={item.href}
                                                     className={classNames(
-                                                        item.current ? 'bg-gray-400 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white',
-                                                        'px-3 py-2 rounded-md text-md font-medium'
+                                                                navBg ? "lg:text-gray-700" : "lg:text-gray-900",
+                                                        'hover:bg-sky-500 hover:text-white',
+                                                        'px-3 py-2 rounded-md text-lg font-medium'
                                                     )}
                                                     aria-current={item.current ? 'page' : undefined}
                                                 >

@@ -6,6 +6,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./elements/**/*.{js,ts,jsx,tsx}",
   ],
+
   theme: {
     screens: {
       'sxs': '345px',
@@ -21,6 +22,7 @@ module.exports = {
         clrText: "#464749",
         bgDark: "#eeebf2",
         bgLight: "#f1f1f2",
+        darkBlue: "#0E1134",
       }
     },
   },

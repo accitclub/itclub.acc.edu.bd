@@ -23,7 +23,7 @@ export const NAVIGATION = [
 // Hero Section Contents
 export const HERO_TITLE_1 = "Adamjee Cantonment College"
 export const HERO_TITLE_2 = "IT CLUB"
-export const HERO_TEXT = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
+export const HERO_TEXT = "“ACC IT CLUB” is a Club to inspire and empower students of Adamjee Cantonment College to be involved in IT related tasks and knowledge sharing. "
 
 // About Section Contents
 export const ABOUT_HEADING = "About Us"
