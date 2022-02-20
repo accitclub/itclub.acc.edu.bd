@@ -14,11 +14,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#4f46e5",
+        primary: "#1e3cb7",
         secondary: "#8eee9b",
         clrHeading: "#111827",
         clrsSubheading: "",
-        clrText: "#5c5e62",
+        clrText: "#464749",
         bgDark: "#eeebf2",
         bgLight: "#f1f1f2",
       }

@@ -9,6 +9,8 @@ export default function Footer() {
     return (
         <footer className={"bg-bgDark"}>
             <Wave className={"text-white"}/>
+
+
             <Container>
                 <GridResponsive className={"lg:grid-cols-3"}>
                     <Column>

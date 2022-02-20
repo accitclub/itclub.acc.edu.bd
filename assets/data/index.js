@@ -1,12 +1,12 @@
 // All IDS
 import {FaArtstation, FaBrain, FaCode, FaMobile, FaProjectDiagram, FaVideo} from "react-icons/fa";
 
-export const HERO_ID = "section__hero";
-export const ABOUT_ID = "section__about";
-export const SECTOR_ID = "section__sector";
-export const TESTIMONIAL_ID = "section__testimonial";
-export const GALLERY_ID = "section__gallery";
-export const CONTACT_ID = "section__contactus";
+export const HERO_ID = "hero";
+export const ABOUT_ID = "about";
+export const SECTOR_ID = "sector";
+export const TESTIMONIAL_ID = "testimonial";
+export const GALLERY_ID = "gallery";
+export const CONTACT_ID = "contactus";
 
 const getId = (id) => `#${id}`
 
@@ -85,7 +85,7 @@ export const TESTIMONIALS = [
         image: ""
     },
     {
-        name: "Shafkar Shishir, Lecturer ICT",
+        name: "Principal, Lecturer ICT",
         text: "Sir said that our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the most polite club he has ever seen. Proud of it",
         image: ""
     },
