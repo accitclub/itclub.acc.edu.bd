@@ -20,6 +20,8 @@ module.exports = {
         clrHeading: "#111827",
         clrsSubheading: "",
         clrText: "#464749",
+        clrWhite: "#fff",
+        clrGray: "#e9e7e7",
         bgDark: "#eeebf2",
         bgLight: "#f1f1f2",
         darkBlue: "#0E1134",

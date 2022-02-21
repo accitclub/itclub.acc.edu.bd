@@ -35,7 +35,7 @@ import {AnchorButton, Button} from "../../components/UI/Button";
 export default function Sectors() {
     return (
         <Section id={SECTOR_ID}>
-            <Content className={"overflow-hidden "}>
+            <Content className={"overflow-hidden bg-white"}>
                 <Container>
                     <FlexRow className={"justify-between md:flex-row flex-col"}>
                         <Center className={"flex-[4]"}>

@@ -45,7 +45,7 @@ export function P({children, className, prefix,  ...props}){
 export function Text({children, className, prefix, overrideColor,  ...props}){
     // More Margin Top
     return(
-        <p {...props} className={classNames("text-base sm:text-lg sm:max-w-xl md:text-xl", defaultTextMargin(), !overrideColor && 'overrideColor', className)}>
+        <p {...props} className={classNames("text-base sm:text-lg sm:max-w-xl md:text-xl", defaultTextMargin(), overrideColor ?  overrideColor : 'text-clrText', className)}>
             {prefix}
             {children}
         </p>

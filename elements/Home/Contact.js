@@ -1,10 +1,13 @@
 import {FaCheck, FaCheckCircle, FaImages, FaLinkedin, FaMailBulk, FaPaperPlane, FaPhone} from "react-icons/fa";
 import {useEffect, useState} from "react";
 import {Center, Container, Content, Section} from "../../components/UI/Containers";
-import {Heading, IconHeading, Paragraph, Text} from "../../components/UI/Typography";
+import {Heading, IconHeading, Paragraph, ResponsiveTextLeft, Text} from "../../components/UI/Typography";
 import {Button, Spinner} from "../../components/UI/Button";
 import {Form, FormControl, Input, Label, TextArea} from "../../components/UI/form";
 import {EMAIL} from "../../assets/data/SocialLinks";
+import {NextImage} from "../../components/UI/Images"
+import FormImage from "../../assets/images/contact.png";
+
 import {
     CONTACT_ID,
     CONTACT_US_FORM_HEADER,
@@ -16,17 +19,17 @@ import {
 const ContactLinks = () =>
     <div className={"grid grid-cols-3 gap-1 "}>
         <a name={"Send Email"} title={"Send Email"} href={"mailto:khanasfireza10@gmail.com"}
-           className={"h-14 w-14 text-lg grid place-items-center bg-blue-400 text-gray-50"}>
+           className={"h-14 w-14 text-lg grid place-items-center bg-blue-500 text-gray-50"}>
             <FaMailBulk/>
         </a>
 
         <a name={"Call Phone"} title={"Call"} href={"tel:+8801753489310"}
-           className={"h-14 w-14 text-lg grid place-items-center bg-blue-400 text-gray-50"}>
+           className={"h-14 w-14 text-lg grid place-items-center bg-blue-500 text-gray-50"}>
             <FaPhone/>
         </a>
 
         <a name={"LinkedIn"} title={"LinkedIn"} href={"#"} target={"_blank"}
-           className={"h-14 w-14 text-lg grid place-items-center bg-blue-400 text-gray-50"}>
+           className={"h-14 w-14 text-lg grid place-items-center bg-blue-500 text-gray-50"} rel="noreferrer">
             <FaLinkedin/>
         </a>
 
@@ -110,20 +113,20 @@ export default function Contact(){
     }, [])
 
     return (
-        <Section id={CONTACT_ID}>
-            <Container>
-                <Center>
-                    <IconHeading className={"md:justify-start justify-center"} iconClassName={"bg-indigo-500 text-white"} prefix={<FaPhone/>}>
+        <Section id={CONTACT_ID} className={"bg-white"}>
+            <Container className={"max-w-7xl"}>
+                <ResponsiveTextLeft className={""}>
+                    <IconHeading className={"md:justify-start justify-center"} iconClassName={"bg-blue-900 text-white"} prefix={<FaPhone/>}>
                         {CONTACT_US_HEADER}
                     </IconHeading>
-                </Center>
+                </ResponsiveTextLeft>
                 <div className={"grid md:grid-cols-5 grid-cols-1 mt-20 z-20  bg-gray-200 rounded-2xl z-20"}>
                     <div className={"col-span-2 z-20 md:px-4 md:py-20 px-2 py-8 lg:w-9/12 md:w-full w-11/12 mx-auto "}>
                         <Content>
-                            <Heading id={"contact_h"} className={"text-4xl font-semibold text-indigo-500"}>{CONTACT_US_FORM_HEADER}</Heading>
-                            <hr id={"contact_hr"} className={"w-32 h-1 border-none bg-indigo-400 rounded-xl mt-3"}/>
+                            <h3 id={"contact_h"} className={"text-4xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 gradient-text"}>{CONTACT_US_FORM_HEADER}</h3>
+                            <hr id={"contact_hr"} className={"w-32 h-2 border-none bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl mt-3"}/>
                         </Content>
-                        <Text id={"contact_text"} className={"mt-14 dark:text-typo-dark-200 text-typo-light-200 text-xl"}>
+                        <Text id={"contact_text"} className={"mt-14 text-xl"}>
                             {CONTACT_US_FORM_PARAGRAPH}
                             <br/>
                             Send message vai this form or you can mail me at
@@ -135,10 +138,9 @@ export default function Contact(){
 
                     </div>
                     <div
-                        className={"col-span-3 bg-indigo-400 rounded-3xl border-[1rem] border-gray-300"}>
-                        <Content
-                            className={"rounded-2xl bg-opacity-70 lg:w-9/12 md:w-full w-11/12 m-auto h-full md:px-4 md:py-8 px-2 py-4"}>
-                            <Form onSubmit={onSubmit} className={"mt-10"}>
+                        className={"col-span-3 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-3xl border-[1rem] border-gray-200"}>
+                        <Content className={"rounded-2xl bg-opacity-70 lg:w-9/12 md:w-full w-11/12 m-auto h-full md:px-2 md:py-4 px-2 py-4"}>
+                            <Form onSubmit={onSubmit} className={"mt-10 "}>
                                 <FormControl className="relative contact_input">
                                     <Label htmlFor="name" className={"text-gray-100  font-medium"}>Your Name</Label>
                                     <Input value={data.name} onChange={onChange} id="name" name="name" type="text"
@@ -179,8 +181,7 @@ export default function Contact(){
                                     </Paragraph>
                                 }
 
-                                <Button type="submit"
-                                        className="mt-10 ml-auto w-28 ">
+                                <Button type="submit" className="mt-10 ml-auto w-28 py-4 px-4">
                                     {data.loading && <Spinner/>}
                                     Send <span className={"ml-2"}><FaPaperPlane/></span>
                                 </Button>

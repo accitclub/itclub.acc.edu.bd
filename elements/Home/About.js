@@ -58,7 +58,7 @@ export default function About() {
                                     <Heading>
                                         {ABOUT_CONTENT_HEADING_1}
                                     </Heading>
-                                    <Text>
+                                    <Text className={'text-clrText'}>
                                         {ABOUT_CONTENT_TEXT_1}
                                     </Text>
                                 </Content>
@@ -110,7 +110,7 @@ export default function About() {
                     </Container>
                 </Content>
             </Content>
-            <Wave className={"text-bgLight -mt-1"}/>
+            <Wave className={"text-bgLight bg-white -mt-1"}/>
         </Section>
     )
 }

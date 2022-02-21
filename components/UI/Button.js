@@ -13,7 +13,7 @@ export function AnchorButton({children, className, href="#", ...props}){
 
 export function Button({className, children, ...props}){
     return(
-        <button  {...props} className={classNames("w-32 flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-indigo-700 md:py-4 md:text-lg md:px-10", className)}>
+        <button  {...props} className={classNames("w-32 flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium  text-white bg-primary transition hover:bg-sky-700 hover:transform hover:-translate-y-1 active:translate-y-1 md:py-3 md:text-lg md:px-10", className)}>
             {children}
         </button>
     )

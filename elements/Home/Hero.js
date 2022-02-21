@@ -11,8 +11,8 @@ export default function Hero() {
     return (
         <Main id={HERO_ID} className={"h-min-screen"}>
             <Section >
-                <Content className={`bg-gradient-to-t to-green-400 from-blue-500`}>
-                    <Relative className="overflow-hidden lg:container lg:mx-auto lg:block grid">
+                <Content className={`bg-gradient-to-b from-cyan-500 to-blue-500`}>
+                    <Relative className="overflow-hidden lg:container lg:mx-auto lg:block grid ">
                         <Relative className="relative overflow-hidden max-w-7xl mx-auto order-2">
                             <Relative className="relative z-10 lg:max-w-3xl xl:max-w-3xl lg:w-7/12">
                                 <Content className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-32">

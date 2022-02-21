@@ -7,16 +7,16 @@ import {CONTACTS, FOOTER_HEADER, FOOTER_TEXT, NAVIGATION} from "../../assets/dat
 
 export default function Footer() {
     return (
-        <footer className={"bg-bgDark"}>
+        <footer className={"bg-gradient-to-br from-cyan-500 to-blue-500"}>
             <Wave className={"text-white"}/>
             <Container>
                 <GridResponsive className={"lg:grid-cols-3"}>
                     <Column>
                         <ResponsiveTextLeft>
-                            <Heading className={"xl:text-2xl lg:text-2xl md:text-2xl text-2xl"}>
+                            <Heading className={"xl:text-2xl lg:text-2xl md:text-2xl text-2xl text-darkBlue "}>
                                 {FOOTER_HEADER}
                             </Heading>
-                            <Paragraph>
+                            <Paragraph className={"text-clrGray"}>
                                 {FOOTER_TEXT}
                             </Paragraph>
                             <Content className={"flex mt-4 flex-row md:justify-start justify-center flex-wrap"}>
@@ -30,13 +30,13 @@ export default function Footer() {
                         </ResponsiveTextLeft>
                     </Column>
                     <Column className={"justify-self-center"}>
-                        <h2 className={"text-2xl md:text-left text-center"}>Quick Links</h2>
+                        <h2 className={"text-2xl font-medium md:text-left text-center"}>Quick Links</h2>
                         <Content className={"flex md:flex-col flex-row md:justify-start justify-center mt-4 flex-wrap"}>
 
                             {
                                 NAVIGATION.map((each, key) => (
-                                    <a key={key}
-                                       className={"text-lg  no-underline md:mx-0 md:mr-2 md:p-0 px-2 mx-auto text-gray-700 hover:text-blue-500"}>
+                                    <a key={key} href={each.href}
+                                       className={"text-lg  no-underline md:mx-0 md:mr-2 md:p-0 px-2 mx-auto text-slate-200 hover:text-blue-500"}>
                                         {each.name}
                                     </a>
                                 ))
@@ -50,7 +50,7 @@ export default function Footer() {
                             {
                                 CONTACTS.map((each, key) => (
                                     <p key={key}
-                                       className={"md:text-left text-center text-lg  no-underline md:mx-0 md:mr-2 md:p-0 px-2 mx-auto text-gray-700 hover:text-blue-500"}>
+                                       className={"md:text-left text-center text-lg  no-underline md:mx-0 md:mr-2 md:p-0 px-2 mx-auto text-slate-200 "}>
                                         {each}
                                     </p>
                                 ))

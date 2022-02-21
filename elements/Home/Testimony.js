@@ -30,7 +30,7 @@ export default function Testimony() {
                                     <CarouselSlide key={key}>
                                         <Content className={"bg-bgLight rounded-3xl w-[95%] mx-auto"}>
                                             <Content className={"py-10 px-8"}>
-                                            <span className={"text-7xl"}>
+                                            <span className={"text-7xl text-clrText"}>
                                                 <FaQuoteLeft/>
                                             </span>
                                                 <Text className={"xl:mt-12 lg:mt-10 md:mt-10 sm:mt-10 mt-8"}>
@@ -43,7 +43,7 @@ export default function Testimony() {
                                                     <Content className={"md:h-28 md:w-28 h-24 w-24 bg-gray-200 rounded-full"}>
                                                         {item.image && <Img src={item.image}/>}
                                                     </Content>
-                                                    <p className={"text-center text-gray-100 font-semibold md:text-2xl text-xl mt-2"}>{item.name}</p>
+                                                    <p className={"text-center text-gray-100 font-medium md:text-xl text-lg mt-2"}>{item.name}</p>
                                                 </Center>
                                             </Content>
                                         </Content>
@@ -62,7 +62,7 @@ export default function Testimony() {
                             {
                                 TESTIMONIAL_LIST_TEXT.map((each, key) => (
                                     <Content key={key} className={"sm:max-w-xl lg:mx-0 sm:mx-auto lg:mt-0 mt-10"}>
-                                        <h3 className={"flex items-center text-2xl font-semibold "}>
+                                        <h3 className={"flex items-center text-2xl font-semibold text-clrHeading"}>
                                         <span
                                             className={"h-8 w-8 rounded-full grid place-items-center bg-emerald-500 text-white mr-3"}>
                                             <FaCheckCircle/>
