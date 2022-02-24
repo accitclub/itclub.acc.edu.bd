@@ -7,6 +7,7 @@ import Image4 from "../images/image4.jpg";
 import Image5 from "../images/image5.jpg";
 import Image6 from "../images/image6.jpg";
 import Image7 from "../images/image7.jpg";
+import ShishirSir from "../images/shishirsir.jpg";
 
 export const HERO_ID = "hero";
 export const ABOUT_ID = "about";
@@ -88,13 +89,13 @@ export const TESTIMONIAL_CONTENT_TEXT = "Sir said that our club is very skillful
 export const TESTIMONIALS = [
     {
         name: "Shafkar Shishir, Lecturer ICT",
-        text: "Sir said that our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the most polite club he has ever seen. Proud of it",
-        image: ""
+        text: "Our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the one of the most talented club. Proud of it",
+        image: ShishirSir
     },
     {
         name: "Principal, Lecturer ICT",
-        text: "Sir said that our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the most polite club he has ever seen. Proud of it",
-        image: ""
+        text: "Our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the one of the most talented club. Proud of it",
+        image: ShishirSir
     },
 ]
 
@@ -102,14 +103,17 @@ export const TESTIMONIAL_LIST_TEXT = [
     {
         title: "Some Title ",
         text: "Sir said that our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the most polite club he has ever seen. Proud of it",
+
     },
     {
         title: "Some Title ",
         text: "Sir said that our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the most polite club he has ever seen. Proud of it",
+        image: ShishirSir
     },
     {
         title: "Some Title ",
         text: "Sir said that our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the most polite club he has ever seen. Proud of it",
+        image: ShishirSir
     },
 ]
 

@@ -13,7 +13,7 @@ export default function Footer() {
                 <GridResponsive className={"lg:grid-cols-3"}>
                     <Column>
                         <ResponsiveTextLeft>
-                            <Heading className={"xl:text-2xl lg:text-2xl md:text-2xl text-2xl text-darkBlue "}>
+                            <Heading className={"xl:text-2xl lg:text-2xl md:text-2xl text-2xl text-clrWhite "}>
                                 {FOOTER_HEADER}
                             </Heading>
                             <Paragraph className={"text-clrGray"}>
@@ -30,7 +30,7 @@ export default function Footer() {
                         </ResponsiveTextLeft>
                     </Column>
                     <Column className={"justify-self-center"}>
-                        <h2 className={"text-2xl font-medium md:text-left text-center"}>Quick Links</h2>
+                        <h2 className={"text-2xl text-clrWhite font-medium md:text-left text-center"}>Quick Links</h2>
                         <Content className={"flex md:flex-col flex-row md:justify-start justify-center mt-4 flex-wrap"}>
 
                             {
@@ -44,7 +44,7 @@ export default function Footer() {
                         </Content>
                     </Column>
                     <Column className={"md:justify-self-end justify-self-center"}>
-                        <h2 className={"text-2xl md:text-left text-center"}>Contact</h2>
+                        <h2 className={"text-2xl text-clrWhite md:text-left text-center"}>Contact</h2>
                         <Content className={"flex flex-col  md:justify-start justify-center mt-4"}>
 
                             {

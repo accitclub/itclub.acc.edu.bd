@@ -28,8 +28,8 @@ export default function About() {
         <Section id={ABOUT_ID}>
             <Content>
                 <Content className={"bg-bgLight"}>
-                    <Container>
-                        <GridResponsive>
+                    <Container className={"grid gap-y-16"}>
+                        <GridResponsive >
                             <Relative>
                                 <VerticalWatermark>ABOUT</VerticalWatermark>
                                 <Center className={"w-full h-full"}>
@@ -38,7 +38,7 @@ export default function About() {
                                             <Content className={"h-4 w-4 rounded-full bg-clrHeading"}/>
                                             <Content>{ABOUT_HEADING}</Content>
                                         </Heading>
-                                        <TitleHR/>
+                                        <hr className={"w-32 h-3 border-none bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl mt-2 mb-2"}/>
                                         <SubHeading>
                                             {ABOUT_SUB_HEADING}
                                         </SubHeading>
@@ -74,7 +74,7 @@ export default function About() {
                                         {ABOUT_CONTENT_TEXT_2}
                                     </Text>
                                     <Content className={"flex justify-between flex-wrap "+ defaultTextMargin()}>
-                                        <Content className={"px-4 items-center text-center bg-emerald-500 xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
+                                        <Content className={"px-4 items-center text-center bg-[#48a15e] xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
                                             <P className={"text-gray-100 lg:text-lg"}>
                                                 Members
                                             </P>
@@ -83,7 +83,7 @@ export default function About() {
                                             </P>
                                         </Content>
 
-                                        <Content className={"px-4 items-center text-center  bg-sky-500 xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
+                                        <Content className={"px-4 items-center text-center  bg-[#5e48a1] xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
                                             <P className={"text-gray-100 lg:text-lg"}>
                                                 Executive
                                             </P>
@@ -92,7 +92,7 @@ export default function About() {
                                             </P>
                                         </Content>
 
-                                        <Content className={"px-4 items-center text-center  bg-orange-400 xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
+                                        <Content className={"px-4 items-center text-center  bg-[#a15e48] xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
                                             <P className={"text-gray-100 lg:text-lg"}>
                                                 Fests
                                             </P>
