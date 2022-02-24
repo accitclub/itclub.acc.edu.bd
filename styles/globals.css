@@ -5,10 +5,25 @@
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   scroll-padding: 5rem;
+
+}
+
+.gradient-text{
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass{
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1.5px );
+  -webkit-backdrop-filter: blur( 1.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 body, html {
-  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 }
 
 a, button{
@@ -35,7 +50,6 @@ a, button{
 }
 
 .carousel-slide{
-  transform-style: preserve-3d;
   @apply absolute top-0 bottom-0 w-full z-10 box-border transition-transform transform;
 }
 

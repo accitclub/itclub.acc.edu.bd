@@ -1,7 +1,8 @@
 import {FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaGoogle} from "react-icons/fa";
-export const EMAIL = "itclub@acc.edu.bd"
-export const SocialLinksJSXList = [
 
+export const EMAIL = "itclub@acc.edu.bd"
+
+export const SocialLinksJSXList = [
     {
         "name": "Linkedin",
         "icon": <FaLinkedin/>,

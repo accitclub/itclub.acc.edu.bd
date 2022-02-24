@@ -16,7 +16,6 @@ export default function Home() {
       <HTMLHead/>
       <Navbar/>
       <main className={"lg:pt-0 pt-10"}>
-
         <Hero/>
         <About/>
         <Sectors/>

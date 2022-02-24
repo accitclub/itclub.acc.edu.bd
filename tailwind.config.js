@@ -6,6 +6,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./elements/**/*.{js,ts,jsx,tsx}",
   ],
+
   theme: {
     screens: {
       'sxs': '345px',
@@ -14,13 +15,16 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#4f46e5",
+        primary: "#1e3cb7",
         secondary: "#8eee9b",
         clrHeading: "#111827",
         clrsSubheading: "",
-        clrText: "#6b7280",
-        bgDark: "#D9E8F4",
-        bgLight: "#cedfed",
+        clrText: "#464749",
+        clrWhite: "#fff",
+        clrGray: "#e9e7e7",
+        bgDark: "#eeebf2",
+        bgLight: "#f1f1f2",
+        darkBlue: "#0E1134",
       }
     },
   },
