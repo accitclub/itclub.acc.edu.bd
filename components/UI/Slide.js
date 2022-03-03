@@ -8,7 +8,7 @@ function useTilt(active, parentRef) {
     const size = useWindowSize();
 
     useEffect(() => {
-        console.log(size)
+      
         if (!ref.current || !active) {
             return;
         }
