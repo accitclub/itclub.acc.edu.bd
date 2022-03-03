@@ -66,7 +66,7 @@ export default function Carousel({children,
         getSlideArray().map((each) => {
             maxHeight = Math.max(maxHeight, each.children[0].getBoundingClientRect().height)
         })
-        carousel.current.style.height = maxHeight + 10 + 'px';
+        carousel.current.style.height = maxHeight + 20 + 'px';
     }
 
 

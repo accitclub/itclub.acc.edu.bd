@@ -136,30 +136,30 @@ export default function Contact() {
                         className={"col-span-3 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-3xl border-[1rem] border-gray-200"}>
                         <Content
                             className={"rounded-2xl bg-opacity-70 lg:w-9/12 md:w-full w-11/12 m-auto h-full md:px-2 md:py-4 px-2 py-4"}>
-                            <Form onSubmit={onSubmit} className={"mt-10 "}>
+                            <Form onSubmit={onSubmit} className={"mt-14 "}>
                                 <FormControl className="relative contact_input">
                                     <Label htmlFor="name" className={"text-gray-100  font-medium"}>Your Name</Label>
                                     <Input value={data.name} onChange={onChange} id="name" name="name" type="text"
                                            required={true}
-                                           className="px-2 rounded-lg h-10 w-full bg-indigo-100 border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-4 caret-sky-500 focus:border-sky-400"
+                                           className="px-2 rounded-lg h-10 w-full bg-white border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-4 caret-sky-500 focus:border-sky-400"
                                            placeholder="Name"/>
                                 </FormControl>
 
-                                <FormControl className="relative mt-14 contact_input">
+                                <FormControl className="relative mt-8 contact_input">
                                     <Label htmlFor="email" className={"text-gray-100 font-medium"}>Your Email</Label>
                                     <Input value={data.email} onChange={onChange} id="email" name="email" type="text"
                                            required={true}
-                                           className="px-2 rounded-lg h-10 w-full bg-indigo-100 border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-4 caret-sky-500 focus:border-sky-400"
+                                           className="px-2 rounded-lg h-10 w-full bg-white border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-4 caret-sky-500 focus:border-sky-400"
                                            placeholder="john@doe.com"/>
                                 </FormControl>
 
 
-                                <FormControl className="mt-14 relative contact_input">
+                                <FormControl className=" mt-8  relative contact_input">
                                     <Label htmlFor="message" className={"text-gray-100  font-medium"}>Your
                                         Message</Label>
                                     <TextArea value={data.message} onChange={onChange} id="message" name={"message"}
                                               required={true}
-                                              className="px-2 rounded-lg w-full bg-indigo-100 border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-4 caret-sky-500 focus:border-sky-400 resize-none h-28"
+                                              className="px-2 rounded-lg w-full bg-white border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-4 caret-sky-500 focus:border-sky-400 resize-none h-28"
                                     />
                                 </FormControl>
                                 {
