@@ -10,29 +10,25 @@ import {
 import AboutImage1 from "../../assets/images/about_image1.png";
 import AboutImage2 from "../../assets/images/about_image2.png";
 import AboutImage3 from "../../assets/images/about_image3.png";
-import {
-    CenterText,
-    defaultTextMargin,
-    Heading, HorizontalWatermark,
-    P,
-    SubHeading,
-    Text,
-    TitleHR,
-    VerticalWatermark
-} from "../../components/UI/Typography";
+import {CenterText, defaultTextMargin, Heading, P, SubHeading, Text} from "../../components/UI/Typography";
 import {NextImage, Wave} from "../../components/UI/Images";
-import {Center, Container, Content, Grid, GridResponsive, Relative, Section} from "../../components/UI/Containers";
+import {Center, Container, Content, GridResponsive, Section} from "../../components/UI/Containers";
 import Roadmap from "./Roadmap";
+import {motion} from "framer-motion";
 
 export default function About() {
     return (
         <Section id={ABOUT_ID}>
             <Content>
                 <Content className={"bg-bgLight"}>
-                    <Container className={"grid gap-y-16"}>
-                        <GridResponsive className={"md:gap-x-20"}>
-                            <Relative>
-                                <VerticalWatermark>ABOUT</VerticalWatermark>
+                    <Container className={"grid md:gap-y-16 gap-y-6"}>
+                        <GridResponsive className={"md:gap-x-20 gap-y-6"}>
+                            <motion.div className={"relative"}
+                                        initial={{opacity: 0, x: -150}}
+                                        whileInView={{opacity: 1, x: 0}}
+                                        transition={{duration: 0.4}}
+                                        viewport={{once: true}}>
+
                                 <Center className={"w-full h-full"}>
                                     <CenterText>
                                         <Heading className={"flex items-center"}>
@@ -45,28 +41,46 @@ export default function About() {
                                         </SubHeading>
                                     </CenterText>
                                 </Center>
-                            </Relative>
+
+                            </motion.div>
                             <Content>
-                                <NextImage className={"mx-auto h-96"} src={AboutImage1}/>
+                                <motion.div initial={{opacity: 0, x: 150}}
+                                            whileInView={{opacity: 1, x: 0}}
+                                            transition={{duration: 0.4}}
+                                            viewport={{once: true}}>
+                                    <NextImage className={"mx-auto h-96"} src={AboutImage1}/>
+                                </motion.div>
                             </Content>
                         </GridResponsive>
-                        <GridResponsive className={"md:mt-0 mt-10  md:gap-x-20"}>
-                            <Content className={"md:order-1 order-2"}>
-                                <NextImage className={"mx-auto h-96 my-auto"} src={AboutImage3}/>
-                            </Content>
+                        <GridResponsive className={"md:mt-0 mt-10  md:gap-x-20 gap-y-6"}>
+                            <motion.div initial={{opacity: 0, y: 100}}
+                                        whileInView={{opacity: 1, y: 0}}
+                                        transition={{duration: 0.4}}
+                                        viewport={{once: true}}>
+                                <Content className={"md:order-1 order-2"}>
+                                    <NextImage className={"mx-auto h-96 my-auto"} src={AboutImage3}/>
+                                </Content>
+                            </motion.div>
                             <Content className={"my-auto md:order-2 order-1 md:text-left text-center"}>
-                                <Content>
+                                <motion.div initial={{opacity: 0, x: 150}}
+                                            whileInView={{opacity: 1, x: 0}}
+                                            transition={{duration: 0.4}}
+                                            viewport={{once: true}}>
                                     <Heading>
                                         {ABOUT_CONTENT_HEADING_1}
                                     </Heading>
                                     <Text className={'text-clrText'}>
                                         {ABOUT_CONTENT_TEXT_1}
                                     </Text>
-                                </Content>
+                                </motion.div>
                             </Content>
                         </GridResponsive>
-                        <GridResponsive className={"md:mt-0 mt-10 md:gap-x-20"}>
-                            <Content className={"my-auto mx-auto  md:text-right text-center"}>
+                        <GridResponsive className={"md:mt-0 mt-10 md:gap-x-20 gap-y-6"}>
+                            <motion.div initial={{opacity: 0, x: -150}}
+                                        whileInView={{opacity: 1, x: 0}}
+                                        transition={{duration: 0.4}}
+                                        viewport={{once: true}}
+                                        className={"my-auto mx-auto  md:text-right text-center"}>
                                 <Content>
                                     <Heading>
                                         {ABOUT_CONTENT_HEADING_2}
@@ -74,36 +88,49 @@ export default function About() {
                                     <Text>
                                         {ABOUT_CONTENT_TEXT_2}
                                     </Text>
-                                    <Content className={"flex justify-between flex-wrap "+ defaultTextMargin()}>
-                                        <Content className={"px-4 items-center text-center bg-[#48a15e] xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
+                                    <Content className={"flex justify-between flex-wrap " + defaultTextMargin()}>
+                                        <motion.div initial={{opacity: 0, y: 150}}
+                                                    whileInView={{opacity: 1, y: 0}}
+                                                    transition={{duration: 0.4}}
+                                                    viewport={{once: true}}
+                                                    className={"px-4 items-center text-center bg-[#48a15e] xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
                                             <P className={"text-gray-100 lg:text-lg"}>
                                                 Members
                                             </P>
                                             <P className={"text-white font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
                                                 100+
                                             </P>
-                                        </Content>
+                                        </motion.div>
 
-                                        <Content className={"px-4 items-center text-center  bg-[#5e48a1] xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
+                                        <motion.div
+                                            initial={{opacity: 0, y: 150}}
+                                            whileInView={{opacity: 1, y: 0}}
+                                            transition={{duration: 0.4, delay: 0.4,}}
+                                            viewport={{once: true}}
+                                            className={"px-4 items-center text-center  bg-[#5e48a1] xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
                                             <P className={"text-gray-100 lg:text-lg"}>
                                                 Executive
                                             </P>
                                             <P className={"text-white font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
                                                 12+
                                             </P>
-                                        </Content>
-
-                                        <Content className={"px-4 items-center text-center bg-yellow-500 xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
+                                        </motion.div>
+                                        <motion.div
+                                            initial={{opacity: 0, y: 10}}
+                                            whileInView={{opacity: 1, y: 0}}
+                                            transition={{duration: 0.4, delay: 0.8,}}
+                                            viewport={{once: true}}
+                                            className={"px-4 items-center text-center bg-yellow-500 xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
                                             <P className={"text-gray-100 lg:text-lg"}>
                                                 Fests
                                             </P>
                                             <P className={"text-white font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
                                                 10+
                                             </P>
-                                        </Content>
+                                        </motion.div>
                                     </Content>
                                 </Content>
-                            </Content>
+                            </motion.div>
                             <Content>
                                 <NextImage className={"mx-auto h-96 my-auto"} src={AboutImage2} alt=""/>
                             </Content>

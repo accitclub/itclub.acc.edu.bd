@@ -1,7 +1,7 @@
 import {Disclosure, Transition} from '@headlessui/react'
 import {MenuIcon, XIcon} from '@heroicons/react/outline'
 import {useEffect, useState, Fragment} from "react";
-
+import {AnimatePresence, motion} from "framer-motion";
 import {HERO_ID, NAVIGATION as navigation} from "../../assets/data";
 import Logo from "./Images";
 import {ToTopButton} from "./Button";
@@ -9,8 +9,6 @@ import {ToTopButton} from "./Button";
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
-
-
 
 export default function Navbar() {
     const [navBg, setNavBg] = useState(false);
@@ -41,27 +39,34 @@ export default function Navbar() {
                                         )}
                                     </Disclosure.Button>
                                 </div>
-                                <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start">
+                                <div className="flex-1 flex items-center justify-center md:items-stretch ">
                                     <div className="flex-shrink-0 flex items-center">
                                         <Logo/>
                                     </div>
                                     <div className="hidden md:block sm:ml-6">
-                                        <div className="flex space-x-4">
-                                            {navigation.map((item) => (
-                                                <a
-                                                    key={item.name}
-                                                    href={item.href}
-                                                    className={classNames(
-                                                                navBg ? "lg:text-gray-800 hover:bg-blue-500 hover:text-white" : "lg:text-gray-100 hover:bg-white hover:text-sky-500",
-                                                        '',
-                                                        'px-3 py-2 rounded-md text-md font-medium'
-                                                    )}
-                                                    aria-current={item.current ? 'page' : undefined}
-                                                >
-                                                    {item.name}
-                                                </a>
-                                            ))}
-                                        </div>
+                                            <div className="flex space-x-4">
+                                                <AnimatePresence>
+                                                {navigation.map((item, key) => (
+                                                    <motion.a
+                                                        initial={{opacity: 0, y: 10}}
+                                                        whileInView={{opacity: 1, y: 0}}
+                                                        transition={{delay: key * 0.2}}
+                                                        viewport={{ once: true }}
+                                                        key={item.name}
+                                                        href={item.href}
+                                                        className={classNames(
+                                                            navBg ? "lg:text-gray-800 hover:bg-blue-500 hover:text-white" : "lg:text-gray-100 hover:bg-white hover:text-sky-500",
+                                                            '',
+                                                            'px-3 py-2 rounded-md text-md font-medium'
+                                                        )}
+                                                        aria-current={item.current ? 'page' : undefined}
+                                                    >
+                                                        {item.name}
+                                                    </motion.a>
+                                                ))}
+                                                </AnimatePresence>
+                                            </div>
+
                                     </div>
                                 </div>
                             </div>
