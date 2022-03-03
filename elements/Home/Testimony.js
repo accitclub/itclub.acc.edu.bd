@@ -58,10 +58,10 @@ export default function Testimony() {
                                 TESTIMONIAL_CONTENT_TEXT
                             }
                         </Text>
-                        <FlexColumn className={"justify-between lg:mt-20 md:mt-16 mt-5 flex-1"}>
+                        <FlexColumn className={"justify-between lg:mt-5 md:mt-6 mt-5 flex-1"}>
                             {
                                 TESTIMONIAL_LIST_TEXT.map((each, key) => (
-                                    <Content key={key} className={"sm:max-w-xl lg:mx-0 sm:mx-auto lg:mt-0 mt-10"}>
+                                    <Content key={key} className={"sm:max-w-xl lg:mx-0 sm:mx-auto lg:mt-10 mt-10"}>
                                         <h3 className={"flex items-center text-2xl font-semibold text-clrHeading"}>
                                         <span
                                             className={"h-8 w-8 rounded-full grid place-items-center bg-emerald-500 text-white mr-3"}>
