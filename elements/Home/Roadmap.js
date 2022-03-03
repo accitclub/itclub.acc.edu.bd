@@ -3,6 +3,7 @@ import {Absolute, Content, FlexRow, Grid} from "../../components/UI/Containers";
 import classNames from "classnames";
 import {FaStar} from "react-icons/fa";
 import {motion} from "framer-motion";
+import {RoadMapList} from "../../assets/data";
 
 const DashedLine = ({
                         className, text, horizontalLineProps, circleProps, lineAlign = "left", ...props
@@ -57,30 +58,6 @@ const circleProps = (delay) => {
         viewport: {once: true}}
 }
 
-const RoadMapList = [
-    {
-    title: "The Beginning",
-    id: 1,
-    year: 2016,
-    text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
-}, {
-    title: "The Beginning",
-    id: 2,
-    year: 2017,
-    text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
-}, {
-    title: "The Beginning",
-    id: 3,
-    year: 2018,
-    text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
-},
-{
-    title: "The Beginning",
-    id: 4,
-    year: 2019,
-    text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
-},
-]
 
 export default function Roadmap() {
     return (<Content className={"mt-14"}>

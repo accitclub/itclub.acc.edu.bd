@@ -5,37 +5,31 @@ import {IconHeading, Paragraph, ResponsiveTextLeft, Text} from "../../components
 import {Button, Spinner} from "../../components/UI/Button";
 import {Form, FormControl, Input, Label, TextArea} from "../../components/UI/form";
 import {EMAIL} from "../../assets/data/SocialLinks";
-
+import {motion} from "framer-motion";
 import {CONTACT_ID, CONTACT_US_FORM_HEADER, CONTACT_US_FORM_PARAGRAPH, CONTACT_US_HEADER} from "../../assets/data";
 
-const ContactLinks = () =>
-    <div className={"grid grid-cols-3 gap-1 "}>
-        <a name={"Send Email"} title={"Send Email"} href={"mailto:khanasfireza10@gmail.com"}
-           className={"h-14 w-14 text-lg grid place-items-center bg-blue-500 text-gray-50"}>
-            <FaMailBulk/>
-        </a>
+const ContactLinks = () => <div className={"grid grid-cols-3 gap-1 "}>
+    <a name={"Send Email"} title={"Send Email"} href={"mailto:khanasfireza10@gmail.com"}
+       className={"h-14 w-14 text-lg grid place-items-center bg-blue-500 text-gray-50"}>
+        <FaMailBulk/>
+    </a>
 
-        <a name={"Call Phone"} title={"Call"} href={"tel:+8801753489310"}
-           className={"h-14 w-14 text-lg grid place-items-center bg-blue-500 text-gray-50"}>
-            <FaPhone/>
-        </a>
+    <a name={"Call Phone"} title={"Call"} href={"tel:+8801753489310"}
+       className={"h-14 w-14 text-lg grid place-items-center bg-blue-500 text-gray-50"}>
+        <FaPhone/>
+    </a>
 
-        <a name={"LinkedIn"} title={"LinkedIn"} href={"#"} target={"_blank"}
-           className={"h-14 w-14 text-lg grid place-items-center bg-blue-500 text-gray-50"} rel="noreferrer">
-            <FaLinkedin/>
-        </a>
+    <a name={"LinkedIn"} title={"LinkedIn"} href={"#"} target={"_blank"}
+       className={"h-14 w-14 text-lg grid place-items-center bg-blue-500 text-gray-50"} rel="noreferrer">
+        <FaLinkedin/>
+    </a>
 
-    </div>
+</div>
 
 
 export default function Contact() {
     const [data, setData] = useState({
-        name: "",
-        email: "",
-        message: "",
-        error: "",
-        loading: false,
-        sent: false,
+        name: "", email: "", message: "", error: "", loading: false, sent: false,
     })
 
     const changeData = (newData) => {
@@ -47,7 +41,7 @@ export default function Contact() {
     }
 
     function validateEmail(email) {
-        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
     }
 
@@ -58,37 +52,23 @@ export default function Contact() {
         } else {
             changeData({loading: true})
             fetch("/api/mail", {
-                method: "POST",
-                headers: {
+                method: "POST", headers: {
                     "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data),
-                mode: 'no-cors',
-                referrerPolicy: 'no-referrer',
-            }).then((res) => {
+                }, body: JSON.stringify(data), mode: 'no-cors', referrerPolicy: 'no-referrer',
+            }).then(() => {
                 changeData({
-                    name: "",
-                    email: "",
-                    message: "",
-                    loading: false,
-                    sent: true
+                    name: "", email: "", message: "", loading: false, sent: true
                 })
                 setTimeout(() => {
                     changeData({
-                        name: "",
-                        email: "",
-                        message: "",
-                        loading: false,
-                        sent: true
+                        name: "", email: "", message: "", loading: false, sent: true
                     })
                 }, 5000)
 
-            }).catch((e) => {
-                console.log(e.message);
+            }).catch(() => {
                 changeData({
                     loading: false,
-                    error: "Unable to send message, please try again. " +
-                        "Or send mail to my email address",
+                    error: "Unable to send message, please try again. " + "Or send mail to my email address",
                     name: "",
                     email: "",
                     message: "",
@@ -104,8 +84,7 @@ export default function Contact() {
 
     }, [])
 
-    return (
-        <Section id={CONTACT_ID} className={"bg-white"}>
+    return (<Section id={CONTACT_ID} className={"bg-white"}>
             <Container className={"max-w-7xl"}>
                 <ResponsiveTextLeft className={""}>
                     <IconHeading className={"md:justify-start justify-center"} iconClassName={"bg-blue-500 text-white"}
@@ -113,7 +92,12 @@ export default function Contact() {
                         {CONTACT_US_HEADER}
                     </IconHeading>
                 </ResponsiveTextLeft>
-                <div className={"grid md:grid-cols-5 grid-cols-1 mt-20 z-20  bg-gray-200 rounded-2xl z-20"}>
+                <motion.div
+                    initial={{opacity: 0, y: 100}}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{duration: 0.5,}}
+                    viewport={{once: true}}
+                    className={"grid md:grid-cols-5 grid-cols-1 mt-20 z-20  bg-gray-200 rounded-2xl z-20"}>
                     <div className={"col-span-2 z-20 md:px-4 md:py-20 px-2 py-8 lg:w-9/12 md:w-full w-11/12 mx-auto "}>
                         <Content>
                             <h3 id={"contact_h"}
@@ -162,21 +146,16 @@ export default function Contact() {
                                               className="px-2 rounded-lg w-full bg-white border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-4 caret-sky-500 focus:border-sky-400 resize-none h-28"
                                     />
                                 </FormControl>
-                                {
-                                    <Paragraph className={"text-rose-100"}>{data.error}</Paragraph>
-                                }
-                                {
-                                    data.sent &&
-                                    <Paragraph className={"flex items-center text-emerald-50 text-xl"}>
+                                {<Paragraph className={"text-rose-100"}>{data.error}</Paragraph>}
+                                {data.sent && <Paragraph className={"flex items-center text-emerald-50 text-xl"}>
                                         <span
                                             className={"p-2 mr-3 text-emerald-500 rounded-full grid place-items-center bg-white"}>
                                             <FaCheck/>
                                         </span>
-                                        <span>
+                                    <span>
                                             Thank you for your message ! We will get back to you soon
                                         </span>
-                                    </Paragraph>
-                                }
+                                </Paragraph>}
 
                                 <Button type="submit" className="mt-10 ml-auto w-28 py-4 px-4">
                                     {data.loading && <Spinner/>}
@@ -185,8 +164,7 @@ export default function Contact() {
                             </Form>
                         </Content>
                     </div>
-                </div>
+                </motion.div>
             </Container>
-        </Section>
-    )
+        </Section>)
 }

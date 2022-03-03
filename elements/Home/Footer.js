@@ -36,7 +36,7 @@ export default function Footer() {
                             {
                                 NAVIGATION.map((each, key) => (
                                     <a key={key} href={each.href}
-                                       className={"text-lg  no-underline md:mx-0 md:mr-2 md:p-0 px-2 mx-auto text-slate-200 hover:text-blue-500"}>
+                                       className={"text-lg  no-underline md:mx-0 md:mr-2 md:p-0 px-2 mx-auto text-slate-200 hover:text-green-200"}>
                                         {each.name}
                                     </a>
                                 ))

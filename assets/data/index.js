@@ -43,6 +43,32 @@ export const ABOUT_CONTENT_TEXT_1 = "\"ACC IT CLUB\" is a student body that insp
 export const ABOUT_CONTENT_HEADING_2 = "What We Do"
 export const ABOUT_CONTENT_TEXT_2 = "This club will also organize many IT related events in Adamjee Cantonment College for expressing these motives more clearly and also imparting inspiration and knowledge along with potential of IT. It will also make use of the potential Adamjee Cantonment College students have in IT related fields."
 
+
+export const RoadMapList = [
+    {
+        title: "The Beginning",
+        id: 1,
+        year: 2016,
+        text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
+    }, {
+        title: "The Beginning",
+        id: 2,
+        year: 2017,
+        text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
+    }, {
+        title: "The Beginning",
+        id: 3,
+        year: 2018,
+        text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
+    },
+    {
+        title: "The Beginning",
+        id: 4,
+        year: 2019,
+        text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
+    },
+]
+
 // Sector Section Content
 
 export const SECTOR_CONTENT_HEADING = "Sector"

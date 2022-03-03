@@ -1,11 +1,11 @@
 import {useRef} from "react";
 import {Container, Section} from "../../components/UI/Containers";
 import {Wave} from "../../components/UI/Images";
-import {IconHeading, Paragraph, ResponsiveTextLeft, Text} from "../../components/UI/Typography";
+import {IconHeading, Paragraph, ResponsiveTextLeft} from "../../components/UI/Typography";
 import {GallerySlides} from "../../components/UI/Slide";
 import {FaImages} from "react-icons/fa";
 import {GALLERY_HEADER, GALLERY_ID, GALLERY_SUB_TEXT, SLIDES} from "../../assets/data";
-
+import {motion} from "framer-motion";
 
 export default function Gallery() {
     const containerRef = useRef(null)
@@ -13,7 +13,11 @@ export default function Gallery() {
     return (
         <Section id={GALLERY_ID}>
             <Wave className={"text-bgDark bg-bgLight"}/>
-            <Section className={"bg-bgLight"}>
+            <motion.section initial={{opacity: 0, y: 100}}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{duration: 0.5,}}
+                            viewport={{once: true}}
+                            className={"bg-bgLight"}>
                 <Container className={"pb-0"}>
                     <ResponsiveTextLeft className={"py-0"}>
                         <IconHeading className={"md:justify-start justify-center"} prefix={<FaImages/>}>
@@ -30,7 +34,7 @@ export default function Gallery() {
                         <GallerySlides slides={SLIDES} parentRef={containerRef}/>
                     </div>
                 </Section>
-            </Section>
+            </motion.section>
         </Section>
     )
 }
