@@ -13,7 +13,7 @@ import AboutImage3 from "../../assets/images/about_image3.png";
 import {
     CenterText,
     defaultTextMargin,
-    Heading,
+    Heading, HorizontalWatermark,
     P,
     SubHeading,
     Text,
@@ -21,7 +21,8 @@ import {
     VerticalWatermark
 } from "../../components/UI/Typography";
 import {NextImage, Wave} from "../../components/UI/Images";
-import {Center, Container, Content, GridResponsive, Relative, Section} from "../../components/UI/Containers";
+import {Center, Container, Content, Grid, GridResponsive, Relative, Section} from "../../components/UI/Containers";
+import Roadmap from "./Roadmap";
 
 export default function About() {
     return (
@@ -29,7 +30,7 @@ export default function About() {
             <Content>
                 <Content className={"bg-bgLight"}>
                     <Container className={"grid gap-y-16"}>
-                        <GridResponsive >
+                        <GridResponsive className={"md:gap-x-20"}>
                             <Relative>
                                 <VerticalWatermark>ABOUT</VerticalWatermark>
                                 <Center className={"w-full h-full"}>
@@ -49,7 +50,7 @@ export default function About() {
                                 <NextImage className={"mx-auto h-96"} src={AboutImage1}/>
                             </Content>
                         </GridResponsive>
-                        <GridResponsive className={"md:mt-0 mt-10 lg:gap-x-10 md:gap-x-2"}>
+                        <GridResponsive className={"md:mt-0 mt-10  md:gap-x-20"}>
                             <Content className={"md:order-1 order-2"}>
                                 <NextImage className={"mx-auto h-96 my-auto"} src={AboutImage3}/>
                             </Content>
@@ -64,7 +65,7 @@ export default function About() {
                                 </Content>
                             </Content>
                         </GridResponsive>
-                        <GridResponsive className={"md:mt-0 mt-10 lg:gap-x-10 md:gap-x-2"}>
+                        <GridResponsive className={"md:mt-0 mt-10 md:gap-x-20"}>
                             <Content className={"my-auto mx-auto  md:text-right text-center"}>
                                 <Content>
                                     <Heading>
@@ -92,7 +93,7 @@ export default function About() {
                                             </P>
                                         </Content>
 
-                                        <Content className={"px-4 items-center text-center  bg-[#a15e48] xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
+                                        <Content className={"px-4 items-center text-center bg-yellow-500 xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
                                             <P className={"text-gray-100 lg:text-lg"}>
                                                 Fests
                                             </P>
@@ -107,6 +108,7 @@ export default function About() {
                                 <NextImage className={"mx-auto h-96 my-auto"} src={AboutImage2} alt=""/>
                             </Content>
                         </GridResponsive>
+                        <Roadmap/>
                     </Container>
                 </Content>
             </Content>
