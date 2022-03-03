@@ -13,11 +13,7 @@ export default function Gallery() {
     return (
         <Section id={GALLERY_ID}>
             <Wave className={"text-bgDark bg-bgLight"}/>
-            <motion.section initial={{opacity: 0, y: 100}}
-                            whileInView={{opacity: 1, y: 0}}
-                            transition={{duration: 0.5,}}
-                            viewport={{once: true}}
-                            className={"bg-bgLight"}>
+            <motion.section className={"bg-bgLight"}>
                 <Container className={"pb-0"}>
                     <ResponsiveTextLeft className={"py-0"}>
                         <IconHeading className={"md:justify-start justify-center"} prefix={<FaImages/>}>
@@ -28,12 +24,16 @@ export default function Gallery() {
                         </Paragraph>
                     </ResponsiveTextLeft>
                 </Container>
-                <Section className={"md:py-10 py-4"}>
+                <motion.section initial={{opacity: 0, y: 100}}
+                                whileInView={{opacity: 1, y: 0}}
+                                transition={{duration: 0.5,}}
+                                viewport={{once: true}}
+                                className={"md:py-10 py-4"}>
                     <div ref={containerRef}
                          className={"flex justify-center items-center relative overflow-hidden box-border md:container md:mx-auto py-10 px-5 rounded-2xl"}>
                         <GallerySlides slides={SLIDES} parentRef={containerRef}/>
                     </div>
-                </Section>
+                </motion.section>
             </motion.section>
         </Section>
     )
