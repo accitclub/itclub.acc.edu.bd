@@ -27,7 +27,7 @@ export default function Navbar() {
             <Disclosure as="nav" className={classNames("transition-all bg-bgDark fixed w-screen z-50", navBg ? "lg:bg-bgDark": "lg:bg-transparent")}>
                 {({open}) => (
                     <>
-                        <div className="max-w-7xl mx-auto px-2 md:px-6 lg:px-8">
+                        <div className="container mx-auto px-2 md:px-6 lg:px-8">
                             <div className="relative flex items-center justify-between h-16">
                                 <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                                     {/* Mobile menu button*/}

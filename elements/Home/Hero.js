@@ -12,7 +12,7 @@ export default function Hero() {
         <Main id={HERO_ID} className={"h-min-screen"}>
             <Section >
                 <Content className={`bg-gradient-to-b from-cyan-500 to-blue-500`}>
-                    <Relative className="overflow-hidden lg:container lg:mx-auto grid lg:grid-cols-2">
+                    <Relative className="overflow-hidden max-w-7xl lg:container lg:mx-auto grid lg:grid-cols-2">
                         <Relative className="relative overflow-hidden max-w-7xl mx-auto lg:order-1 order-2">
                             <Content className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-32">
                                 <ResponsiveTextLeft overwriteClass={true} className="lg:text-left text-center pb-8 lg:pb-32 md:pb-0">
