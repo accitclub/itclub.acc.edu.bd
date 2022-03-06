@@ -25,7 +25,7 @@ export default function Navbar() {
             <Disclosure as="nav" className={classNames("transition-all bg-bgDark fixed w-screen z-50", navBg ? "lg:bg-bgDark": "lg:bg-transparent")}>
                 {({open}) => (
                     <>
-                        <div className="container mx-auto px-2 md:px-6 lg:px-8">
+                        <div className="container mx-auto ">
                             <div className="relative flex items-center justify-between h-16">
                                 <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                                     {/* Mobile menu button*/}
@@ -39,9 +39,9 @@ export default function Navbar() {
                                         )}
                                     </Disclosure.Button>
                                 </div>
-                                <div className="flex-1 flex items-center justify-center md:items-stretch ">
+                                <div className="flex-1 flex items-center lg:justify-between justify-center md:items-stretch ">
                                     <div className="flex-shrink-0 flex items-center">
-                                        <Logo/>
+                                        <Logo/> <span className={classNames("ml-2 font-medium text-clrHeading", !navBg ? 'lg:text-white' : 'lg:text-clrHeading')}>ACCITC</span>
                                     </div>
                                     <div className="hidden md:block sm:ml-6">
                                             <div className="flex space-x-4">
@@ -55,9 +55,9 @@ export default function Navbar() {
                                                         key={item.name}
                                                         href={item.href}
                                                         className={classNames(
-                                                            navBg ? "lg:text-gray-800 hover:bg-blue-500 hover:text-white" : "lg:text-gray-100 hover:bg-white hover:text-sky-500",
+                                                            navBg ? "lg:text-gray-800 hover:bg-blue-500 hover:text-white" : "lg:text-gray-300 hover:bg-white hover:text-sky-500",
                                                             '',
-                                                            'px-3 py-2 rounded-md text-md font-medium'
+                                                            'px-3 py-2 rounded-md text-lg font-medium'
                                                         )}
                                                         aria-current={item.current ? 'page' : undefined}
                                                     >
