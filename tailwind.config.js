@@ -25,6 +25,8 @@ module.exports = {
         bgDark: "#f4f3f5",
         bgLight: "#f7f7f7",
         darkBlue: "#0E1134",
+        gradientBlue: "#0f054c",
+        gradientLightBlue: "#5761d7"
       }
     },
   },
