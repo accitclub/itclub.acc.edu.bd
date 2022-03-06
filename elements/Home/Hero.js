@@ -21,7 +21,7 @@ export default function Hero() {
                                         className="lg:text-left text-center pb-8 lg:pb-32 md:pb-0">
                                     <motion.div initial={{opacity: 0, y: 2}}
                                                 whileInView={{opacity: 1, y: 0}}
-                                                transition={{delay: 0.6}}
+                                                transition={{delay: 0.7}}
                                                 viewport={{ once: true }}>
                                         <Heading className={"text-center"}>
                                             <>
@@ -35,7 +35,7 @@ export default function Hero() {
                                     </motion.div>
                                     <motion.div initial={{opacity: 0, y: 2}}
                                                 whileInView={{opacity: 1, y: 0}}
-                                                transition={{delay: 0.7}}
+                                                transition={{delay: 0.9}}
                                                 viewport={{ once: true }}>
                                         <Text overrideColor={true}
                                               className={"text-center text-gray-50 font-normal xl:mt-10 lg:mt-10 md:mt-10"}>
@@ -44,7 +44,7 @@ export default function Hero() {
                                     </motion.div>
                                     <motion.div initial={{opacity: 0, y: 2}}
                                                 whileInView={{opacity: 1, y: 0}}
-                                                transition={{delay: 0.9}}
+                                                transition={{delay: 1.1}}
                                                 viewport={{ once: true }}>
                                         <FlexRow className="mt-5 sm:mt-10 justify-center lg:justify-start">
                                             <AnchorButton draggable={false}
