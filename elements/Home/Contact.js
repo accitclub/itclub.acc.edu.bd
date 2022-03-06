@@ -117,7 +117,7 @@ export default function Contact() {
 
                     </div>
                     <div
-                        className={"col-span-3 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-3xl border-[1rem] border-gray-200"}>
+                        className={"col-span-3 bg-gradientLightBlue rounded-3xl border-[1rem] border-gray-200"}>
                         <Content
                             className={"rounded-2xl bg-opacity-70 lg:w-9/12 md:w-full w-11/12 m-auto h-full md:px-2 md:py-4 px-2 py-4"}>
                             <Form onSubmit={onSubmit} className={"mt-14 "}>
@@ -157,7 +157,7 @@ export default function Contact() {
                                         </span>
                                 </Paragraph>}
 
-                                <Button type="submit" className="mt-10 ml-auto w-28 py-4 px-4">
+                                <Button type="submit" className="mt-10 ml-auto w-28 py-4 px-4 border-white border-2 bg-transparent hover:bg-white hover:text-indigo-500">
                                     {data.loading && <Spinner/>}
                                     Send <span className={"ml-2"}><FaPaperPlane/></span>
                                 </Button>
