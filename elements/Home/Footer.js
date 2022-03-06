@@ -7,7 +7,7 @@ import {CONTACTS, FOOTER_HEADER, FOOTER_TEXT, NAVIGATION} from "../../assets/dat
 
 export default function Footer() {
     return (
-        <footer className={"bg-gradient-to-br from-cyan-500 to-blue-500"}>
+        <footer className={"bg-gradient-to-br from-gradientBlue to-gradientLightBlue"}>
             <Wave className={"text-white"}/>
             <Container>
                 <GridResponsive className={"lg:grid-cols-3"}>
