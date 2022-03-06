@@ -30,6 +30,33 @@ a, button{
   @apply cursor-pointer;
 }
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-500 transition-all duration-500 rounded-sm;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-indigo-600 transition-all duration-500 cursor-pointer;
+  width: 15px;
+}
+
+.transition-position{
+  transition: top, left, right, bottom, margin-top, margin-left, margin-bottom, margin-right 500ms;
+}
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
