@@ -30,6 +30,13 @@ a, button{
   @apply cursor-pointer;
 }
 
+.hero-bg{
+  background: radial-gradient(#5761d7, #0f054c);
+}
+
+.hero-main{
+  min-height: 80vh;
+}
 
 /* width */
 ::-webkit-scrollbar {
