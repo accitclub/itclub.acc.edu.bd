@@ -31,7 +31,7 @@ export const Particle = () => {
                         enable: true,
                         outMode: "bounce",
                         random: false,
-                        speed: 2,
+                        speed: 4,
                         straight: false,
                     },
                     number: {
@@ -39,7 +39,7 @@ export const Particle = () => {
                             enable: true,
                             area: 2000,
                         },
-                        value: 80,
+                        value: 60,
                     },
                     opacity: {
                         value: 0.7,
@@ -49,7 +49,7 @@ export const Particle = () => {
                     },
                     size: {
                         random: true,
-                        value: 5,
+                        value: 7,
                     },
                 },
                 detectRetina: true,
