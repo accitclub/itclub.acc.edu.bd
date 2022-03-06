@@ -10,7 +10,7 @@ import {
 import AboutImage1 from "../../assets/images/about_image1.png";
 import AboutImage2 from "../../assets/images/about_image2.png";
 import AboutImage3 from "../../assets/images/about_image3.png";
-import {CenterText, defaultTextMargin, Heading, P, SubHeading, Text} from "../../components/UI/Typography";
+import {CenterText, defaultTextMargin, Heading, P, Paragraph, SubHeading, Text} from "../../components/UI/Typography";
 import {NextImage, Wave} from "../../components/UI/Images";
 import {Center, Container, Content, GridResponsive, Section} from "../../components/UI/Containers";
 import Roadmap from "./Roadmap";
@@ -21,8 +21,8 @@ export default function About() {
         <Section id={ABOUT_ID}>
             <Content>
                 <Content className={"bg-bgLight"}>
-                    <Container className={"grid md:gap-y-16 gap-y-6"}>
-                        <GridResponsive className={"md:gap-x-20 gap-y-6"}>
+                    <Container className={"grid md:gap-y-28 gap-y-10"}>
+                        <GridResponsive className={"md:gap-x-28 gap-y-10"}>
                             <motion.div className={"relative"}
                                         initial={{opacity: 0, x: -150}}
                                         whileInView={{opacity: 1, x: 0}}
@@ -52,7 +52,7 @@ export default function About() {
                                 </motion.div>
                             </Content>
                         </GridResponsive>
-                        <GridResponsive className={"md:mt-0 mt-10  md:gap-x-20 gap-y-6"}>
+                        <GridResponsive className={"md:mt-0 mt-10 md:gap-x-28 gap-y-10"}>
                             <motion.div initial={{opacity: 0, y: 100}}
                                         whileInView={{opacity: 1, y: 0}}
                                         transition={{duration: 0.4}}
@@ -75,7 +75,7 @@ export default function About() {
                                 </motion.div>
                             </Content>
                         </GridResponsive>
-                        <GridResponsive className={"md:mt-0 mt-10 md:gap-x-20 gap-y-6"}>
+                        <GridResponsive className={"md:mt-0 mt-10 md:gap-x-28 gap-y-10"}>
                             <motion.div initial={{opacity: 0, x: -150}}
                                         whileInView={{opacity: 1, x: 0}}
                                         transition={{duration: 0.4}}
@@ -85,9 +85,9 @@ export default function About() {
                                     <Heading>
                                         {ABOUT_CONTENT_HEADING_2}
                                     </Heading>
-                                    <Text>
+                                    <Paragraph className={"mt-3 max-w-xl mr-0 md:ml-auto mx-auto sm:mt-10 md:mt-10 md:mt-16 xl:mt-20"}>
                                         {ABOUT_CONTENT_TEXT_2}
-                                    </Text>
+                                    </Paragraph>
                                     <Content className={"flex justify-between flex-wrap " + defaultTextMargin()}>
                                         <motion.div initial={{opacity: 0, y: 150}}
                                                     whileInView={{opacity: 1, y: 0}}
