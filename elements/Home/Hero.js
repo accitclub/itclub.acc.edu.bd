@@ -5,11 +5,13 @@ import {NextImage, Wave} from "../../components/UI/Images";
 import {Heading, Text} from "../../components/UI/Typography";
 import {AnchorButton} from "../../components/UI/Button";
 import {motion} from "framer-motion";
+import {Particle} from "../../components/Particles";
 
 
 export default function Hero() {
     return (
-        <Main id={HERO_ID} className={""}>
+        <Main id={HERO_ID} className={"relative"}>
+            <Particle/>
             <Section>
                 <Content className={`bg-gradient-to-b from-cyan-500 to-blue-500`}>
                     <Relative className="overflow-hidden max-w-7xl lg:container lg:mx-auto grid">
