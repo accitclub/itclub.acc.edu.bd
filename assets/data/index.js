@@ -158,36 +158,36 @@ export const GALLERY_SUB_TEXT = "Welcome To Our Gallery"
 
 export const SLIDES = [
     {
-        title: "One",
+        title: "",
         image: Image1.src
     },
     {
-        title: "Two",
+        title: "",
         description: "",
         image: Image2.src
     },
     {
-        title: "Three",
+        title: "",
         description: "",
         image: Image3.src
     },
     {
-        title: "Four",
+        title: "",
         description: "",
         image: Image4.src
     },
     {
-        title: "Five",
+        title: "",
         description: "",
         image: Image5.src
     },
     {
-        title: "Five",
+        title: "",
         description: "",
         image: Image6.src
     },
     {
-        title: "Five",
+        title: "",
         description: "",
         image: Image7.src
     },
