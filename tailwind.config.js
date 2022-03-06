@@ -22,8 +22,8 @@ module.exports = {
         clrText: "#464749",
         clrWhite: "#fff",
         clrGray: "#e9e7e7",
-        bgDark: "#eeebf2",
-        bgLight: "#f1f1f2",
+        bgDark: "#f4f3f5",
+        bgLight: "#f7f7f7",
         darkBlue: "#0E1134",
       }
     },
