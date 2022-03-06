@@ -13,7 +13,7 @@ export default function Hero() {
     return (
         <Main id={HERO_ID} className={"relative hero-main"}>
             <Particle/>
-            <Section className={"bg-gradient-to-b from-gradientBlue to-gradientLightBlue hero-main"}>
+            <Section className={"bg-gradient-to-br from-gradientLightBlue to-gradientBlue hero-main"}>
                 <Section className={"container mx-auto xl:py-32 lg:py-24 py-16 xl:px-0 lg:px-2"}>
                     <Content
                         className={"sm:grid 2xl:grid-cols-2 xl:grid-cols-5 lg:grid-cols-7 auto-rows-max grid-cols-1 lg:grid-rows-1 grid-rows-2"}>
