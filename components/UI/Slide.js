@@ -134,13 +134,13 @@ export function GallerySlides({slides, parentRef}) {
         <>
 
             <div ref={slidesRef} className="slides">
-                <button onClick={prevButtonOnClick}>‹</button>
+                <button onClick={nextButtonOnClick}>‹</button>
 
                 {slides && [...slides, ...slides, ...slides].map((slide, i) => {
                     let offset = slides.length + (state.slideIndex - i);
                     return <Slide slide={slide} parentRef={slidesRef} offset={offset} key={i} />;
                 })}
-                <button onClick={nextButtonOnClick}>›</button>
+                <button onClick={prevButtonOnClick}>›</button>
             </div>
         </>
     );
