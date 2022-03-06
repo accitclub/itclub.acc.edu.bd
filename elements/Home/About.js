@@ -7,66 +7,68 @@ import {
     ABOUT_ID,
     ABOUT_SUB_HEADING
 } from "../../assets/data";
-import AboutImage1 from "../../assets/images/about_image1.png";
 import AboutImage2 from "../../assets/images/about_image2.png";
 import AboutImage3 from "../../assets/images/about_image3.png";
-import {CenterText, defaultTextMargin, Heading, P, Paragraph, SubHeading, Text} from "../../components/UI/Typography";
+import {defaultTextMargin, Heading, P, Paragraph, SubHeading, Text} from "../../components/UI/Typography";
 import {NextImage, Wave} from "../../components/UI/Images";
-import {Center, Container, Content, GridResponsive, Section} from "../../components/UI/Containers";
+import {Center, Container, Content, Section} from "../../components/UI/Containers";
 import Roadmap from "./Roadmap";
 import {motion} from "framer-motion";
+import classNames from "classnames";
+
+export const Stats = [
+    {
+        name: "Members",
+        number: "100+",
+        color1: "border-emerald-200",
+        color2: "border-emerald-500"
+    },
+    {
+        name: "Executive",
+        number: "12+",
+        color1: "border-orange-200",
+        color2: "border-orange-500"
+    },
+    {
+        name: "Fests",
+        number: "12+",
+        color1: "border-indigo-200",
+        color2: "border-indigo-500"
+    },
+]
 
 export default function About() {
     return (
         <Section id={ABOUT_ID}>
             <Content>
-                <Content className={"bg-bgLight"}>
-                    <Container className={"grid md:gap-y-28 gap-y-10"}>
-                        <GridResponsive className={"md:gap-x-28 gap-y-10"}>
-                            <motion.div className={"relative"}
-                                        initial={{opacity: 0, x: -150}}
-                                        whileInView={{opacity: 1, x: 0}}
-                                        transition={{duration: 0.4}}
-                                        viewport={{once: true}}>
-
-                                <Center className={"w-full h-full"}>
-                                    <CenterText>
-                                        <Heading className={"flex items-center"}>
-                                            <Content className={"h-4 w-4 rounded-full bg-clrHeading"}/>
-                                            <Content>{ABOUT_HEADING}</Content>
-                                        </Heading>
-                                        <hr className={"w-32 h-3 border-none bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl mt-2 mb-2"}/>
-                                        <SubHeading>
-                                            {ABOUT_SUB_HEADING}
-                                        </SubHeading>
-                                    </CenterText>
-                                </Center>
-
-                            </motion.div>
-                            <Content>
-                                <motion.div initial={{opacity: 0, x: 150}}
-                                            whileInView={{opacity: 1, x: 0}}
-                                            transition={{duration: 0.4}}
-                                            viewport={{once: true}}>
-                                    <NextImage className={"mx-auto h-96"} src={AboutImage1}/>
-                                </motion.div>
-                            </Content>
-                        </GridResponsive>
-                        <GridResponsive className={"md:mt-0 mt-10 md:gap-x-28 gap-y-10"}>
+                <Content className={"bg-bgLight lg:py-20"}>
+                    <Container className={"grid lg:gap-y-10 gap-y-10"}>
+                        <Center className={"pb-10"}>
+                            <Heading className={"flex items-center"}>
+                                <Content className={"h-4 w-4 rounded-full bg-clrHeading"}/>
+                                <Content>{ABOUT_HEADING}</Content>
+                            </Heading>
+                            <hr className={"w-32 h-3 border-none bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl mt-2 mb-2"}/>
+                            <SubHeading>
+                                {ABOUT_SUB_HEADING}
+                            </SubHeading>
+                        </Center>
+                        <Content className={"grid lg:grid-cols-2 md:mt-0 mt-10 md:gap-x-28 gap-y-10"}>
                             <motion.div initial={{opacity: 0, y: 100}}
                                         whileInView={{opacity: 1, y: 0}}
                                         transition={{duration: 0.4}}
                                         viewport={{once: true}}>
-                                <Content className={"md:order-1 order-2"}>
+                                <Content className={"md:order-1 order-2 lg:w-full md:w-9/12 lg:mx-0 mx-auto"}>
                                     <NextImage className={"mx-auto h-96 my-auto"} src={AboutImage3}/>
                                 </Content>
                             </motion.div>
-                            <Content className={"my-auto md:order-2 order-1 md:text-left text-center"}>
-                                <motion.div initial={{opacity: 0, x: 150}}
+                            <Content className={"my-auto md:order-2 order-1 "}>
+                                <motion.div className={"lg:text-left text-center"}
+                                            initial={{opacity: 0, x: 150}}
                                             whileInView={{opacity: 1, x: 0}}
                                             transition={{duration: 0.4}}
                                             viewport={{once: true}}>
-                                    <Heading>
+                                    <Heading className={"xl:text-5xl lg:text-4xl md:text-4xl text-4xl"}>
                                         {ABOUT_CONTENT_HEADING_1}
                                     </Heading>
                                     <Text className={'text-clrText'}>
@@ -74,67 +76,55 @@ export default function About() {
                                     </Text>
                                 </motion.div>
                             </Content>
-                        </GridResponsive>
-                        <GridResponsive className={"md:mt-0 mt-10 md:gap-x-28 gap-y-10"}>
+                        </Content>
+                        <Content className={"grid lg:grid-cols-2 md:mt-0 mt-10 md:gap-x-28 gap-y-10"}>
                             <motion.div initial={{opacity: 0, x: -150}}
                                         whileInView={{opacity: 1, x: 0}}
                                         transition={{duration: 0.4}}
                                         viewport={{once: true}}
-                                        className={"my-auto mx-auto  md:text-right text-center"}>
-                                <Content>
-                                    <Heading>
+                                        className={"lg:order-2 order-1"}>
+                                <Content className={"my-auto mx-auto  lg:text-right text-center"}>
+                                    <Heading className={"xl:text-5xl lg:text-4xl md:text-4xl text-4xl"}>
                                         {ABOUT_CONTENT_HEADING_2}
                                     </Heading>
-                                    <Paragraph className={"mt-3 max-w-xl mr-0 md:ml-auto mx-auto sm:mt-10 md:mt-10 md:mt-16 xl:mt-20"}>
+                                    <Paragraph
+                                        className={"mt-3 max-w-xl lg:mr-0 lg:ml-auto mx-auto sm:mt-10 md:mt-10 md:mt-16 xl:mt-20"}>
                                         {ABOUT_CONTENT_TEXT_2}
                                     </Paragraph>
-                                    <Content className={"flex justify-between flex-wrap " + defaultTextMargin()}>
-                                        <motion.div initial={{opacity: 0, y: 150}}
-                                                    whileInView={{opacity: 1, y: 0}}
-                                                    transition={{duration: 0.4}}
-                                                    viewport={{once: true}}
-                                                    className={"px-4 items-center text-center bg-[#48a15e] xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
-                                            <P className={"text-gray-100 lg:text-lg"}>
-                                                Members
-                                            </P>
-                                            <P className={"text-white font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
-                                                100+
-                                            </P>
-                                        </motion.div>
-
-                                        <motion.div
-                                            initial={{opacity: 0, y: 150}}
-                                            whileInView={{opacity: 1, y: 0}}
-                                            transition={{duration: 0.4, delay: 0.4,}}
-                                            viewport={{once: true}}
-                                            className={"px-4 items-center text-center  bg-[#5e48a1] xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
-                                            <P className={"text-gray-100 lg:text-lg"}>
-                                                Executive
-                                            </P>
-                                            <P className={"text-white font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
-                                                12+
-                                            </P>
-                                        </motion.div>
-                                        <motion.div
-                                            initial={{opacity: 0, y: 10}}
-                                            whileInView={{opacity: 1, y: 0}}
-                                            transition={{duration: 0.4, delay: 0.8,}}
-                                            viewport={{once: true}}
-                                            className={"px-4 items-center text-center bg-yellow-500 xl:w-40 xl:h-40 lg:w-32 lg:h-32 md:w-28 md:h-28 sm:w-28 sm:h-28 w-24 h-24 flex flex-col justify-center"}>
-                                            <P className={"text-gray-100 lg:text-lg"}>
-                                                Fests
-                                            </P>
-                                            <P className={"text-white font-semibold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
-                                                10+
-                                            </P>
-                                        </motion.div>
+                                    <Content className={"flex justify-center flex-wrap " + defaultTextMargin()}>
+                                        {
+                                            Stats.map((each, key) => (
+                                                <motion.div key={key}
+                                                            initial={{opacity: 0, y: 150}}
+                                                            whileInView={{opacity: 1, y: 0}}
+                                                            transition={{duration: 0.4, delay: 0.5 * key}}
+                                                            viewport={{once: true}}
+                                                            className={classNames("items-center mx-5 border-[6px] rounded-full" , each.color1,
+                                                                "text-center lg:w-44 lg:h-44 " ,
+                                                                " relative md:w-44 md:h-44 w-36 h-36 flex flex-col " ,
+                                                                "justify-center")}>
+                                                            <Content className={classNames("w-full h-full rounded-full border-4", each.color2)}>
+                                                                <Content className={classNames("w-full h-full rounded-full flex flex-col justify-center border-[6px]", each.color1)}>
+                                                                    <P className={"text-black font-bold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
+                                                                        {each.number}
+                                                                    </P>
+                                                                    <p className={"z-20 text-gray-500 mt-0 font-medium text-lg"}>
+                                                                        {each.name}
+                                                                    </p>
+                                                                    <p className={"absolute z-10 text-sm px-6 py-6 -bottom-5 left-1/2 transform bg-bgLight -translate-x-1/2 px-3 lg:text-lg"}>
+                                                                       </p>
+                                                                </Content>
+                                                            </Content>
+                                                </motion.div>
+                                            ))
+                                        }
                                     </Content>
                                 </Content>
                             </motion.div>
-                            <Content>
-                                <NextImage className={"mx-auto h-96 my-auto"} src={AboutImage2} alt=""/>
+                            <Content className={"lg:order-2 order-1 lg:w-full md:w-9/12 lg:mx-0 mx-auto"}>
+                                <NextImage className={"mx-auto h-96 my-auto "} src={AboutImage2} alt=""/>
                             </Content>
-                        </GridResponsive>
+                        </Content>
                         <Roadmap/>
                     </Container>
                 </Content>
