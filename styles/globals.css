@@ -24,18 +24,20 @@
 
 body, html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a, button{
   @apply cursor-pointer;
 }
 
-.hero-bg{
+.circular-gradient{
   background: radial-gradient(#5761d7, #0f054c);
 }
 
 .hero-main{
-  min-height: 80vh;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 /* width */
@@ -51,12 +53,12 @@ a, button{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-indigo-500 transition-all duration-500 rounded-sm;
+  @apply bg-gray-700 transition-all duration-500 rounded-sm;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-indigo-600 transition-all duration-500 cursor-pointer;
+  @apply bg-gray-800 transition-all duration-500 cursor-pointer;
   width: 15px;
 }
 
