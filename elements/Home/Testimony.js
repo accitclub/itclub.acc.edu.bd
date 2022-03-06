@@ -41,7 +41,7 @@ export default function Testimony() {
                                                     {item.text}
                                                 </Text>
                                             </Content>
-                                            <Content className={"bg-gradient-to-br from-cyan-500 to-blue-500 -mt-1 rounded-3xl"}>
+                                            <Content className={"bg-emerald-500 -mt-1 rounded-3xl"}>
                                                 <Wave className={"text-bgLight "}/>
                                                 <Center className={"py-10 px-8"}>
                                                     <Content className={"md:h-28 md:w-28 h-24 w-24 overflow-hidden bg-gray-200 rounded-full"}>
