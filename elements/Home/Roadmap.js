@@ -11,7 +11,7 @@ const DashedLine = ({
         <motion.div {...props} className={"h-full border-2 border-gray-300 border-dashed"}>
         </motion.div>
         <Absolute
-            className={"h-24 z-30 grid place-items-center w-24 bg-white border-8 border-sky-500 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"}>
+            className={"h-24 z-30 grid place-items-center w-24 bg-white border-8 border-indigo-500 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"}>
             <P className={"sm:mt-0 mt-0 text-xl"}>
                 {text}
             </P>
@@ -19,7 +19,7 @@ const DashedLine = ({
         <motion.div {...horizontalLineProps}
                     className={classNames("absolute transform text-right top-1/2 z-20", "transform -translate-y-1/2 w-1/2 border-2 border-gray-300 right-0 border-dashed", lineAlign === "left" ? "md:left-0" : "md:right-0")}>
             <motion.div {...circleProps}
-                        className={classNames("absolute w-10 h-10 -right-5 rounded-full z-20 border-sky-500 border-8 bg-bgLight top-1/2transform -translate-y-1/2", lineAlign === "left" ? " md:-left-5" : "md:-right-5")}>
+                        className={classNames("absolute w-10 h-10 -right-5 rounded-full z-20 border-indigo-400 border-8 bg-bgLight top-1/2transform -translate-y-1/2", lineAlign === "left" ? " md:-left-5" : "md:-right-5")}>
             </motion.div>
         </motion.div>
     </motion.div>)
