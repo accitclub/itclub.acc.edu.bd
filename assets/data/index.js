@@ -8,6 +8,7 @@ import Image5 from "../images/image5.jpg";
 import Image6 from "../images/image6.jpg";
 import Image7 from "../images/image7.jpg";
 import ShishirSir from "../images/shishirsir.jpg";
+import Turjoe from "../images/turjoe.jpg";
 
 export const HERO_ID = "hero";
 export const ABOUT_ID = "about";
@@ -35,37 +36,42 @@ export const HERO_TEXT = "“ACC IT CLUB” is a Club to inspire and empower stu
 
 // About Section Contents
 export const ABOUT_HEADING = "About Us"
-export const ABOUT_SUB_HEADING = "Some beautiful text for a small title"
+export const ABOUT_SUB_HEADING = "Learn About Adamjee Cantonment College IT Club"
 
-export const ABOUT_CONTENT_HEADING_1 = "What We Do"
-export const ABOUT_CONTENT_TEXT_1 = "\"ACC IT CLUB\" is a student body that inspire and empower students of Adamjee Cantonment College to be involved in IT related tasks and knowledge sharing. This also applies to expand their knowledge about Information and Technology. This club will also have been organizing many IT related events in Adamjee Cantonment College and has participated to different IT related programs to other institutions for expressing these motives more clearly and also imparting inspiration and knowledge along with potential of IT."
+export const ABOUT_CONTENT_HEADING_1 = "Who Are We?"
+export const ABOUT_CONTENT_TEXT_1 = "\"ACC IT CLUB\" is a student body that inspire and empower students of Adamjee Cantonment College " +
+    "to be involved in IT related tasks and knowledge sharing. This also applies to expand their knowledge about Information and Technology. " +
+    "This club will also have been organizing many IT related events in Adamjee Cantonment College and has participated to " +
+    "different IT related programs to other institutions for expressing these motives more clearly."
 
-export const ABOUT_CONTENT_HEADING_2 = "What We Do"
-export const ABOUT_CONTENT_TEXT_2 = "This club will also organize many IT related events in Adamjee Cantonment College for expressing these motives more clearly and also imparting inspiration and knowledge along with potential of IT. It will also make use of the potential Adamjee Cantonment College students have in IT related fields."
+export const ABOUT_CONTENT_HEADING_2 = "Our Accomplishment"
+export const ABOUT_CONTENT_TEXT_2 = "We have organized more than 10 Fests and many inter college and intra college contests, " +
+    "including gaming, programming and many more. Our club has active members and we have 12+ Highly Talented Executives " +
+    "who runs this club with excellence"
 
 
 export const RoadMapList = [
     {
         title: "The Beginning",
         id: 1,
-        year: 2016,
+        year: 2015,
         text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
     }, {
-        title: "The Beginning",
+        title: "1st IT Carnival",
         id: 2,
-        year: 2017,
-        text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
+        year: 2016,
+        text: "We launched first IT Carnival, and we had many competition segments, including, Gaming, IT Quiz, Programming, Project Display, IT Olympiads and many more, A lots of participants were present"
     }, {
-        title: "The Beginning",
+        title: "2nd Intra Gaming Tournament",
         id: 3,
         year: 2018,
-        text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
+        text: "Gaming Sector is one of the most hyped sector of our club and we were able to launch a very competitive and fun gaming tournament, a lot of cyber athletes joined this tournament. "
     },
     {
-        title: "The Beginning",
+        title: "Inter Cant Techno Frenzy",
         id: 4,
         year: 2019,
-        text: "The journey of this valorous club began with the help of our senior teachers, " + "and honourable principal. From that day, ACCIT Club has showed their excellence in many different sectors"
+        text: "We hosted a Tech Fest for the Cantonment School and Colleges, despite being a fest for a small group of people, we were able to get participants more than we expected, and we were able to host it successfully"
     },
 ]
 
@@ -73,7 +79,10 @@ export const RoadMapList = [
 
 export const SECTOR_CONTENT_HEADING = "Sector"
 export const SECTOR_WATERMARK = "SECTORS"
-export const SECTOR_CONTENT_TEXT = "This club will also organize many IT related events in Adamjee Cantonment College for expressing these motives more clearly and also imparting inspiration and knowledge along with potential of IT. It will also make use of the potential Adamjee Cantonment College students have in IT related fields."
+export const SECTOR_CONTENT_TEXT = "Our club has different working sections, where our ultimate goal is to find out " +
+    "talents based on these particular sectors. We divide our workflow based on these sections, as different students might have " +
+    "different field of choice, after dividing the workflow in various sectors, we try to arrange sessions, workshops and contests based on these " +
+    "sectors."
 
 export const SECTOR_LIST = [
     {
@@ -110,36 +119,33 @@ export const SECTOR_LIST = [
 
 // Testimonial Section Content
 export const TESTIMONIAL_CONTENT_HEADING = "Testimonial"
-export const TESTIMONIAL_CONTENT_TEXT = "Sir said that our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the most polite club he has ever seen. Proud of it"
+export const TESTIMONIAL_CONTENT_TEXT = "ACC IT Club is one of the most active clubs of Adamjee Cantonment College. We work our best for the betterment of students and help them learn more about tech"
 
 export const TESTIMONIALS = [
     {
         name: "Shafkar Shishir, Lecturer ICT",
-        text: "Our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the one of the most talented club. Proud of it",
+        text: "Information Tecnology is the vital part of current world, we cannot survive without thinking of it. ACC IT Club is working to encourage youngsters to learn more about technology and use it for their betterment. I am very lucky to be the moderator of this club, students working for these club are very passionate.",
         image: ShishirSir
     },
     {
-        name: "Principal, Lecturer ICT",
-        text: "Our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the one of the most talented club. Proud of it",
-        image: ShishirSir
+        name: "Shahriar Mahmood, Founder ACCITC",
+        text: "Information Technology is here to stay for a long time. Also shaping the foreseeable future. Clubs like ACC IT Club encourages young generation to tap into the knowledge and experience that was otherwise never possible to be motivated to achieve in this age. It has helped me in my personal life and wish it will benefit my future torch bearers as well.",
+        image: Turjoe
     },
 ]
 
 export const TESTIMONIAL_LIST_TEXT = [
     {
-        title: "Some Title ",
-        text: "Sir said that our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the most polite club he has ever seen. Proud of it",
-
+        title: "Friendly and warm environment",
+        text: "We are friendly to everyone and we provide a beautiful environment for the students who want to learn more about technology and improve themselves",
     },
     {
-        title: "Some Title ",
-        text: "Sir said that our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the most polite club he has ever seen. Proud of it",
-        image: ShishirSir
+        title: "Betterment in both career and student life",
+        text: "We try our best to teach some useful technological skill so that a student can do better in both career and his/her student life.",
     },
     {
-        title: "Some Title ",
-        text: "Sir said that our club is very skillful and talented, we waste no time on such activities that can harm ourselves, it is the most polite club he has ever seen. Proud of it",
-        image: ShishirSir
+        title: "Teach and learn",
+        text: "We encourage students who are skilled in a particular field to teach other students who might get benefited from that. ",
     },
 ]
 
