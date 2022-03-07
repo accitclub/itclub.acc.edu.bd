@@ -1,13 +1,14 @@
 import classNames from "classnames";
 import {FaArrowAltCircleUp, FaSpinner} from "react-icons/fa";
+import {motion} from "framer-motion";
 
 export function AnchorButton({children, className, href="#", ...props}){
     return(
-        <div className="rounded-md">
-            <a href={href} {...props} className={classNames("w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-primary hover:bg-indigo-700 md:py-4 md:text-lg md:px-10", className)}>
+        <motion.div className="rounded-md">
+            <motion.a href={href} {...props} className={classNames("w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-primary hover:bg-indigo-700 md:py-4 md:text-lg md:px-10", className)}>
                 {children}
-            </a>
-        </div>
+            </motion.a>
+        </motion.div>
     )
 }
 
