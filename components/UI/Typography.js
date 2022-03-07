@@ -45,7 +45,7 @@ export function P({children, className, prefix,  ...props}){
 export function Text({children, className, prefix, overrideColor,  ...props}){
     // More Margin Top
     return(
-        <motion.p {...props} className={classNames("text-base sm:text-lg sm:max-w-xl md:text-xl", defaultTextMargin(), overrideColor ?  overrideColor : 'text-clrText', className)}>
+        <motion.p {...props} className={classNames("text-base sm:text-lg sm:max-w-xl md:text-lg", defaultTextMargin(), overrideColor ?  overrideColor : 'text-clrText', className)}>
             {prefix}
             {children}
         </motion.p>
@@ -56,7 +56,7 @@ export function Text({children, className, prefix, overrideColor,  ...props}){
 export function Paragraph({children, className, prefix,  ...props}){
     // Less Margin Top
     return(
-        <motion.p {...props} className={classNames("text-base text-clrText sm:text-lg md:text-xl", 'mt-4 sm:mt-4', className)}>
+        <motion.p {...props} className={classNames("text-base text-clrText sm:text-lg md:text-lg", 'mt-4 sm:mt-4', className)}>
             {prefix}
             {children}
         </motion.p>
