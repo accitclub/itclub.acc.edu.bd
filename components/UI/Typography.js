@@ -1,11 +1,11 @@
 import classNames from "classnames";
-
+import {motion} from "framer-motion";
 export function Heading({children, className, prefix, ...props}){
     return(
-        <h2 className={classNames("text-4xl tracking-tight font-extrabold text-clrHeading sm:text-5xl md:text-6xl", className)} {...props}>
+        <motion.h2 className={classNames("text-4xl tracking-tight font-extrabold text-clrHeading sm:text-5xl md:text-6xl", className)} {...props}>
             {prefix}
             {children}
-        </h2>
+        </motion.h2>
     )
 }
 
@@ -35,20 +35,20 @@ export function defaultTextMargin(){
 }
 export function P({children, className, prefix,  ...props}){
     return(
-        <p {...props} className={classNames('mt-4 sm:mt-4', className)}>
+        <motion.p {...props} className={classNames('mt-4 sm:mt-4', className)}>
             {prefix}
             {children}
-        </p>
+        </motion.p>
     )
 }
 
 export function Text({children, className, prefix, overrideColor,  ...props}){
     // More Margin Top
     return(
-        <p {...props} className={classNames("text-base sm:text-lg sm:max-w-xl md:text-xl", defaultTextMargin(), overrideColor ?  overrideColor : 'text-clrText', className)}>
+        <motion.p {...props} className={classNames("text-base sm:text-lg sm:max-w-xl md:text-xl", defaultTextMargin(), overrideColor ?  overrideColor : 'text-clrText', className)}>
             {prefix}
             {children}
-        </p>
+        </motion.p>
     )
 }
 
@@ -56,10 +56,10 @@ export function Text({children, className, prefix, overrideColor,  ...props}){
 export function Paragraph({children, className, prefix,  ...props}){
     // Less Margin Top
     return(
-        <P {...props} className={classNames("text-base text-clrText sm:text-lg md:text-xl", 'mt-4 sm:mt-4', className)}>
+        <motion.p {...props} className={classNames("text-base text-clrText sm:text-lg md:text-xl", 'mt-4 sm:mt-4', className)}>
             {prefix}
             {children}
-        </P>
+        </motion.p>
     )
 }
 
