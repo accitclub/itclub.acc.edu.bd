@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import {motion} from "framer-motion";
 
 export function Container({children, className, ...props}){
     return(
@@ -108,9 +109,9 @@ export function Main({children, ...props}){
 
 export function Content({children, ...props}){
     return(
-        <div  {...props}>
+        <motion.div  {...props}>
             {children}
-        </div>
+        </motion.div>
     )
 }
 
