@@ -7,6 +7,8 @@ import {Heading, Paragraph} from "../../components/UI/Typography";
 import {AnchorButton} from "../../components/UI/Button";
 import {Particle} from "../../components/Particles";
 import classNames from "classnames";
+import {motion} from "framer-motion";
+import {yPresentMotion} from "../../components/motion";
 
 
 export default function Hero() {
@@ -21,38 +23,39 @@ export default function Hero() {
                             <Content
                                 className={"sm:absolute z-10 lg:right-0 2xl:-top-20 xl:-top-16 lg:-top-2 2xl:w-[80vw] xl:w-[80vw] lg:w-[89vw] w-full mx-auto"}>
                                 <Content className={"lg:visible lg:block hidden w-full invisible mx-auto"}>
-                                    <NextImage src={HeroImage}/>
+                                    <NextImage {...yPresentMotion(0.3)} priority src={HeroImage}/>
                                 </Content>
                                 <Content className={"lg:invisible lg:hidden block visible w-full mx-auto"}>
-                                    <NextImage src={HeroCenterImage}/>
+                                    <NextImage {...yPresentMotion(0.3)} priority src={HeroCenterImage}/>
                                 </Content>
                             </Content>
                         </Column>
-                        <Column
-                            className={"2xl:col-span-1 xl:col-span-3 lg:col-span-4 lg:order-1 lg:text-left text-center order-2 lg:mt-24 sm:-mt-1 -mt-2 z-20"}>
-                            <Heading className={"2xl:text-7xl xl:text-6xl lg:text-5xl text-clrWhite"}>
+                        <motion.div className={"2xl:col-span-1 xl:col-span-3 lg:col-span-4 lg:order-1 lg:text-left text-center order-2 lg:mt-24 sm:-mt-1 -mt-2 z-20"}>
+                            <Heading {...yPresentMotion(0)}
+                                className={"2xl:text-7xl xl:text-6xl lg:text-5xl text-clrWhite"}>
                                 {HERO_TITLE_1}
                             </Heading>
-                            <Heading className={"2xl:text-7xl xl:text-6xl mt-2 lg:text-5xl text-emerald-300"}>
+                            <Heading{...yPresentMotion(0.3)}
+                                className={"2xl:text-7xl xl:text-6xl mt-2 lg:text-5xl text-emerald-300"}>
                                 {HERO_TITLE_2}
                             </Heading>
-                            <Paragraph
+                            <Paragraph {...yPresentMotion(0.6)}
                                 className={"text-clrGray 2xl:text-xl xl:text-lg lg:text-md xl:max-w-xl lg:max-w-md mr-auto lg:mt-10"}>
                                 {HERO_TEXT}
                             </Paragraph>
-                            <AnchorButton draggable={false}
-                                          className={classNames("group w-56 mt-10 block lg:mx-0 mx-auto hover:-translate-y-1 ",
-                                              "border-2 border-green-400 text-emerald-300 hover:bg-emerald-500 ",
-                                              "hover:text-white bg-transparent xl:text-xl relative ",
-                                              "font-medium rounded-full transition-all duration-200")}
-                                          href={"#" + ABOUT_ID}>
+                            <AnchorButton {...yPresentMotion(0.9)}
+                                draggable={false}
+                                className={classNames("group w-56 mt-10 block lg:mx-0 mx-auto hover:-translate-y-1 ",
+                                      "border-2 border-green-400 text-emerald-300 hover:bg-emerald-500 ",
+                                      "hover:text-white bg-transparent xl:text-xl relative ",
+                                      "font-medium rounded-full transition-all duration-200")}
+                                href={"#" + ABOUT_ID}>
                                 Learn More
                                 <span
                                     className={"ml-2 h-4 w-4 rounded-full group-hover:bg-white bg-green-500 animate-pulse "}>
-
                                 </span>
                             </AnchorButton>
-                        </Column>
+                        </motion.div>
 
                     </Content>
                 </Section>
