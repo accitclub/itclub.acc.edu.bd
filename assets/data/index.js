@@ -123,12 +123,14 @@ export const TESTIMONIAL_CONTENT_TEXT = "ACC IT Club is one of the most active c
 
 export const TESTIMONIALS = [
     {
-        name: "Shafkar Shishir, Lecturer ICT",
+        name: "Shafkar Shishir",
+        designation: "Lecturer, ICT",
         text: "Information Tecnology is the vital part of current world, we cannot survive without thinking of it. ACC IT Club is working to encourage youngsters to learn more about technology and use it for their betterment. I am very lucky to be the moderator of this club, students working for these club are very passionate.",
         image: ShishirSir
     },
     {
-        name: "Shahriar Mahmood, Founder ACCITC",
+        name: "Shahriar Mahmood",
+        designation: "Founder ACCITC",
         text: "Information Technology is here to stay for a long time. Also shaping the foreseeable future. Clubs like ACC IT Club encourages young generation to tap into the knowledge and experience that was otherwise never possible to be motivated to achieve in this age. It has helped me in my personal life and wish it will benefit my future torch bearers as well.",
         image: Turjoe
     },
