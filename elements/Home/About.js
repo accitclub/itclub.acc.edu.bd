@@ -13,8 +13,8 @@ import {defaultTextMargin, Heading, P, Paragraph, SubHeading, Text} from "../../
 import {NextImage, Wave} from "../../components/UI/Images";
 import {Center, Container, Content, Section} from "../../components/UI/Containers";
 import Roadmap from "./Roadmap";
-import {motion} from "framer-motion";
 import classNames from "classnames";
+import {xLeftPresentMotion, xRightPresentMotion, yPresentMotion} from "../../components/motion";
 
 export const Stats = [
     {
@@ -41,8 +41,8 @@ export default function About() {
     return (
         <Section id={ABOUT_ID}>
             <Content>
-                <Content className={"bg-bgLight lg:py-20"}>
-                    <Container className={"grid lg:gap-y-10 gap-y-10"}>
+                <Content className={"bg-bgLight lg:py-10"}>
+                    <Container className={"grid lg:gap-y-16 gap-y-10"}>
                         <Center className={"pb-10"}>
                             <Heading className={"flex items-center"}>
                                 <Content className={"h-4 w-4 rounded-full bg-clrHeading"}/>
@@ -54,36 +54,27 @@ export default function About() {
                             </SubHeading>
                         </Center>
                         <Content className={"grid lg:grid-cols-2 md:mt-0 mt-10 md:gap-x-28 gap-y-10"}>
-                            <motion.div initial={{opacity: 0, y: 100}}
-                                        whileInView={{opacity: 1, y: 0}}
-                                        transition={{duration: 0.4}}
-                                        viewport={{once: true}}>
+                            <Content {...xLeftPresentMotion(0.2)}>
                                 <Content className={"md:order-1 order-2 lg:w-full md:w-9/12 lg:mx-0 mx-auto"}>
                                     <NextImage className={"mx-auto h-96 my-auto"} src={AboutImage3}/>
                                 </Content>
-                            </motion.div>
-                            <Content className={"my-auto md:order-2 order-1 "}>
-                                <motion.div className={"lg:text-left text-center"}
-                                            initial={{opacity: 0, x: 150}}
-                                            whileInView={{opacity: 1, x: 0}}
-                                            transition={{duration: 0.4}}
-                                            viewport={{once: true}}>
+                            </Content>
+                            <Content className={"mt-auto md:order-2 order-1 "}>
+                                <Content className={"lg:text-left text-center"}
+                                         {...xRightPresentMotion(0.2)}>
                                     <Heading className={"xl:text-5xl lg:text-4xl md:text-4xl text-4xl"}>
                                         {ABOUT_CONTENT_HEADING_1}
                                     </Heading>
                                     <Text className={'text-clrText'}>
                                         {ABOUT_CONTENT_TEXT_1}
                                     </Text>
-                                </motion.div>
+                                </Content>
                             </Content>
                         </Content>
                         <Content className={"grid lg:grid-cols-2 md:mt-0 mt-10 md:gap-x-28 gap-y-10"}>
-                            <motion.div initial={{opacity: 0, x: -150}}
-                                        whileInView={{opacity: 1, x: 0}}
-                                        transition={{duration: 0.4}}
-                                        viewport={{once: true}}
-                                        className={"lg:order-2 order-1"}>
-                                <Content className={"my-auto mx-auto  lg:text-right text-center"}>
+                            <Content {...xLeftPresentMotion(0.2)}
+                                     className={"lg:order-1 order-2 flex"}>
+                                <Content className={"mt-auto mx-auto lg:text-right text-center"}>
                                     <Heading className={"xl:text-5xl lg:text-4xl md:text-4xl text-4xl"}>
                                         {ABOUT_CONTENT_HEADING_2}
                                     </Heading>
@@ -94,35 +85,35 @@ export default function About() {
                                     <Content className={"flex justify-center flex-wrap " + defaultTextMargin()}>
                                         {
                                             Stats.map((each, key) => (
-                                                <motion.div key={key}
-                                                            initial={{opacity: 0, y: 150}}
-                                                            whileInView={{opacity: 1, y: 0}}
-                                                            transition={{duration: 0.4, delay: 0.5 * key}}
-                                                            viewport={{once: true}}
-                                                            className={classNames("items-center mx-5 border-[6px] rounded-full" , each.color1,
-                                                                "text-center lg:w-44 lg:h-44 " ,
-                                                                " relative md:w-44 md:h-44 w-36 h-36 flex flex-col " ,
-                                                                "justify-center")}>
-                                                            <Content className={classNames("w-full h-full rounded-full border-4", each.color2)}>
-                                                                <Content className={classNames("w-full h-full rounded-full flex flex-col justify-center border-[6px]", each.color1)}>
-                                                                    <P className={"text-black font-bold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
-                                                                        {each.number}
-                                                                    </P>
-                                                                    <p className={"z-20 text-gray-500 mt-0 font-medium text-lg"}>
-                                                                        {each.name}
-                                                                    </p>
-                                                                    <p className={"absolute z-10 text-sm px-6 py-6 -bottom-5 left-1/2 transform bg-bgLight -translate-x-1/2 px-3 lg:text-lg"}>
-                                                                       </p>
-                                                                </Content>
-                                                            </Content>
-                                                </motion.div>
+                                                <Content key={key}
+                                                         {...yPresentMotion(0.3 * key)}
+                                                         className={classNames("items-center mx-5 border-[6px] rounded-full", each.color1,
+                                                             "text-center lg:w-44 lg:h-44 ",
+                                                             " relative md:w-44 md:h-44 w-36 h-36 flex flex-col lg:mt-0 mt-10",
+                                                             "justify-center")}>
+                                                    <Content
+                                                        className={classNames("w-full h-full rounded-full border-4", each.color2)}>
+                                                        <Content
+                                                            className={classNames("w-full h-full rounded-full flex flex-col justify-center border-[6px]", each.color1)}>
+                                                            <P className={"text-black font-bold lg:text-3xl md:text-2xl sm:text-xl text-lg"}>
+                                                                {each.number}
+                                                            </P>
+                                                            <p className={"z-20 text-gray-500 mt-0 font-medium text-lg"}>
+                                                                {each.name}
+                                                            </p>
+                                                            <p className={"absolute z-10 text-sm px-6 py-6 -bottom-5 left-1/2 transform bg-bgLight -translate-x-1/2 px-3 lg:text-lg"}>
+                                                            </p>
+                                                        </Content>
+                                                    </Content>
+                                                </Content>
                                             ))
                                         }
                                     </Content>
                                 </Content>
-                            </motion.div>
+                            </Content>
                             <Content className={"lg:order-2 order-1 lg:w-full md:w-9/12 lg:mx-0 mx-auto"}>
-                                <NextImage className={"mx-auto h-96 my-auto "} src={AboutImage2} alt=""/>
+                                <NextImage {...xRightPresentMotion(0.2)} className={"mx-auto h-96 my-auto "}
+                                           src={AboutImage2} alt=""/>
                             </Content>
                         </Content>
                         <Roadmap/>
