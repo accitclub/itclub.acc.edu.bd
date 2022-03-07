@@ -17,8 +17,8 @@
 
 
 .slide-content {
-    width: 70vw;
-    height: 46.66vw;
+    width: 90vw;
+    height: 70vw;
     transform-style: preserve-3d;
     @apply bg-center bg-cover bg-no-repeat transition-all duration-500 ease-in-out opacity-80 z-20 grid content-center md:justify-items-start justify-items-center align-middle;
 }
