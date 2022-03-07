@@ -35,9 +35,11 @@ a, button{
   background: radial-gradient(#5761d7, #0f054c);
 }
 
-.hero-main{
-  min-height: 100vh;
-  overflow: hidden;
+@media screen  and (min-width: 768px){
+  .hero-main{
+    min-height: 100vh;
+    overflow: hidden;
+  }
 }
 
 /* width */
