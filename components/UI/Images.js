@@ -1,9 +1,12 @@
 import logo from "../../assets/images/logo.png"
 import Image from "next/image";
+import {motion} from "framer-motion";
 
-export function NextImage({...props}){
+export function NextImage({className, ...props}){
     return(
-        <Image {...props} alt="Web Image"/>
+        <motion.div {...props}>
+            <Image className={className} {...props} alt="Web Image"/>
+        </motion.div>
     )
 }
 
