@@ -1,7 +1,7 @@
-import {Center, Column, Content, FlexColumn, GridResponsive, Section} from "../../components/UI/Containers";
-import {NextImage, Wave} from "../../components/UI/Images";
+import {Center, Column, Content, FlexColumn, FlexRow, GridResponsive, Section} from "../../components/UI/Containers";
+import {NextImage} from "../../components/UI/Images";
 import {IconHeading, Paragraph, ResponsiveTextLeft, Text} from "../../components/UI/Typography";
-import {FaCheckCircle, FaQuoteLeft, FaUserFriends} from "react-icons/fa";
+import {FaCheckCircle, FaQuoteLeft, FaQuoteRight, FaUserFriends} from "react-icons/fa";
 import Carousel, {CarouselSlide} from "../../components/UI/Carousel";
 import {
     TESTIMONIAL_CONTENT_HEADING,
@@ -22,9 +22,9 @@ export default function Testimony() {
                     </IconHeading>
                 </ResponsiveTextLeft>
                 <GridResponsive className={"lg:grid-cols-2 md:grid-cols-1 mt-32 gap-y-16"}>
-                    <motion.div initial={{opacity:0, x: -100}}
-                                whileInView={{opacity:1, x: 0}}
-                                transition={{duration: 0.5, }}
+                    <motion.div initial={{opacity: 0, x: -100}}
+                                whileInView={{opacity: 1, x: 0}}
+                                transition={{duration: 0.5,}}
                                 viewport={{once: true}}
                     >
                         <Content className={""}>
@@ -34,22 +34,31 @@ export default function Testimony() {
                                     <CarouselSlide key={key}>
                                         <Content className={"bg-bgLight rounded-3xl w-[95%] mx-auto"}>
                                             <Content className={"sm:py-10 p-4 sm:px-8"}>
-                                            <span className={"text-7xl text-clrText"}>
+                                            <FlexRow className={"mb-10"}>
+                                                <Content className={"relative mr-4"}>
+                                                    <Content className={"rounded-full absolute h-full w-full -top-4 -left-4 bg-opacity-50 bg-emerald-400"}>
+
+                                                    </Content>
+                                                    <Content className={"h-24 w-24  overflow-hidden bg-gray-200 rounded-full"}>
+                                                        <NextImage src={item.image}/>
+                                                    </Content>
+                                                </Content>
+                                                <Content>
+                                                    <p className={"text-left text-gray-900 font-medium  text-lg mt-2"}>{item.name}</p>
+                                                    <p className={"text-left text-gray-500 font-medium  text-md mt-1"}>{item.designation}</p>
+                                                </Content>
+                                            </FlexRow >
+                                            <span className={"text-6xl text-green-400"}>
                                                 <FaQuoteLeft/>
                                             </span>
-                                                <Text className={"xl:mt-12 lg:mt-10 md:mt-10 sm:mt-10 mt-8"}>
-                                                    {item.text}
-                                                </Text>
+                                            <Paragraph className={"lg:text-lg md:text-lg text-md lg:my-10 md:my-10 sm:my-10 my-8"}>
+                                                {item.text}
+                                            </Paragraph>
+                                                <span className={"text-6xl flex flex-row-reverse text-right text-green-400"}>
+                                                <FaQuoteRight/>
+                                            </span>
                                             </Content>
-                                            <Content className={"bg-emerald-500 -mt-1 rounded-3xl"}>
-                                                <Wave className={"text-bgLight "}/>
-                                                <Center className={"py-10 px-8"}>
-                                                    <Content className={"md:h-28 md:w-28 h-24 w-24 overflow-hidden bg-gray-200 rounded-full"}>
-                                                         <NextImage src={item.image}/>
-                                                    </Content>
-                                                    <p className={"text-center text-gray-100 font-medium md:text-xl text-lg mt-2"}>{item.name}</p>
-                                                </Center>
-                                            </Content>
+
                                         </Content>
                                     </CarouselSlide>
                                 ))}
@@ -57,9 +66,9 @@ export default function Testimony() {
                         </Content>
                     </motion.div>
                     <Column className={"flex flex-col"}>
-                        <motion.div initial={{opacity:0, y: 10}}
-                                    whileInView={{opacity:1, y: 0}}
-                                    transition={{duration: 0.5, }}
+                        <motion.div initial={{opacity: 0, y: 10}}
+                                    whileInView={{opacity: 1, y: 0}}
+                                    transition={{duration: 0.5,}}
                                     viewport={{once: true}}>
                             <Text
                                 className={"xl:mt-0 lg:mt-0 md:mt-0 mt-10"}>
@@ -73,8 +82,8 @@ export default function Testimony() {
                             {
                                 TESTIMONIAL_LIST_TEXT.map((each, key) => (
                                     <motion.div
-                                        initial={{opacity:0, y: 10}}
-                                        whileInView={{opacity:1, y: 0}}
+                                        initial={{opacity: 0, y: 10}}
+                                        whileInView={{opacity: 1, y: 0}}
                                         transition={{duration: 0.5, delay: key * 0.2}}
                                         viewport={{once: true}}
                                         key={key} className={"sm:max-w-xl lg:mx-0 sm:mx-auto lg:mt-10 mt-10"}>
