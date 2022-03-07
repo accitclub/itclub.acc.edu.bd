@@ -33,7 +33,7 @@ export default function Testimony() {
                                 {TESTIMONIALS.map((item, key) => (
                                     <CarouselSlide key={key}>
                                         <Content className={"bg-bgLight rounded-3xl w-[95%] mx-auto"}>
-                                            <Content className={"py-10 px-8"}>
+                                            <Content className={"sm:py-10 p-4 sm:px-8"}>
                                             <span className={"text-7xl text-clrText"}>
                                                 <FaQuoteLeft/>
                                             </span>
