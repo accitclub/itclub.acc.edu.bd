@@ -38,7 +38,7 @@ export default function Sectors() {
                                             {SECTOR_CONTENT_TEXT}
                                         </Text>
                                         <AnchorButton href={"#" + TESTIMONIAL_ID}
-                                                      className={"lg:flex hidden w-56 xl:mt-20 bg-emerald-500 lg:mt-20 md:mt-20 text-white mt-10 md:mr-auto md:mx-0 mx-auto"}>
+                                                      className={"lg:flex hidden w-56 xl:mt-20 bg-transparent hover:bg-emerald-500 transition-all hover:text-white border-2 border-emerald-400 text-emerald-500 lg:mt-20 md:mt-20 text-white mt-10 md:mr-auto md:mx-0 mx-auto"}>
                                             Learn More
                                         </AnchorButton>
                                     </ResponsiveTextLeft>
