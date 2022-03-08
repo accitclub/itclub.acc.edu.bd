@@ -55,12 +55,12 @@ a, button{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-700 transition-all duration-500 rounded-sm;
+  @apply bg-gray-400 transition-all duration-500 rounded-sm;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-800 transition-all duration-500 cursor-pointer;
+  @apply bg-gray-600 transition-all duration-500 cursor-pointer;
   width: 15px;
 }
 
