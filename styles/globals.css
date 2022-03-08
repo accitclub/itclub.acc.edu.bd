@@ -37,7 +37,7 @@ a, button{
 
 @media screen  and (min-width: 768px){
   .hero-main{
-    min-height: 100vh;
+    min-height: 1010px;
     overflow: hidden;
   }
 }
