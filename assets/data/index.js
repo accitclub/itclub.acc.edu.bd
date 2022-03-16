@@ -44,7 +44,7 @@ export const ABOUT_CONTENT_TEXT_1 = "\"ACC IT CLUB\" is a student body that insp
     "This club will also have been organizing many IT related events in Adamjee Cantonment College and has participated to " +
     "different IT related programs to other institutions for expressing these motives more clearly."
 
-export const ABOUT_CONTENT_HEADING_2 = "Our Accomplishment"
+export const ABOUT_CONTENT_HEADING_2 = " Accomplishments and sectors"
 export const ABOUT_CONTENT_TEXT_2 = "We have organized more than 10 Fests and many inter college and intra college contests, " +
     "including gaming, programming and many more. Our club has active members and we have 12+ Highly Talented Executives " +
     "who runs this club with excellence"
@@ -205,11 +205,11 @@ export const CONTACT_US_FORM_PARAGRAPH = "Send me a feedback about my website an
 
 // Footer Us Section - ✓
 export const FOOTER_HEADER = <>Adamjee Cantonment College <br/> IT CLUB</>
-export const FOOTER_TEXT = "Our little motto"
+export const FOOTER_TEXT = "Excel your IT Skills with us"
 
 
 export const CONTACTS = [
     "Phone Number: +12345566",
     "Mail: itc@acc.edu.bd",
-    "Address: Dhaka Cantonment, Dhaka"
+    "Address: Adamjee Cantonment College, Dhaka Cantonment, Dhaka"
 ]

@@ -108,7 +108,7 @@ export default function Contact() {
                         <Text id={"contact_text"} className={"mt-14 text-xl"}>
                             {CONTACT_US_FORM_PARAGRAPH}
                             <br/>
-                            Send message vai this form or you can mail me at
+                            Send message via this form or you can mail me at
                             <span className={" text-blue-500 ml-2 "}>{EMAIL}</span>
                         </Text>
                         <Content id={"contact_btn"} className={"mt-16 "}>
