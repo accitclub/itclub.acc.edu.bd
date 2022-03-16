@@ -3,7 +3,7 @@ import {Heading, Paragraph} from "../../components/UI/Typography";
 import {FaFacebook, FaLinkedin, FaStar} from "react-icons/fa";
 import {NextImage} from "../../components/UI/Images";
 import ShishirSir from "../../assets/images/shishirsir.jpg";
-import {PanelMembersList} from "../../assets/data/panel";
+import {PanelMembersList} from "../../assets/data/executives";
 
 
 export default function PanelMembers(){
