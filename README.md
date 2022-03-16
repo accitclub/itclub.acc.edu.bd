@@ -1,6 +1,5 @@
-<div style="text-align: center; font-size: 2rem; font-weight: bolder">
-Adamjee Cantonment College IT CLUB Portfolio
-</div> 
+
+## Adamjee Cantonment College IT CLUB Portfolio
 
 <div style="text-align:center;">
   <img height="100" src="https://res.cloudinary.com/dmfkgmd14/image/upload/v1645290271/logo_r1kbq7.png"  alt="LOGO"/>
