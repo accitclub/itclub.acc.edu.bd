@@ -111,7 +111,16 @@ a, button{
   @apply -right-5;
 }
 
-
+.autofill-transparent:-webkit-autofill,
+.autofill-transparent:-webkit-autofill:hover,
+.autofill-transparent:-webkit-autofill:focus,
+.autofill-transparent:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: #1294cd;
+}
+.flex-full{
+  flex: 0 0 100%;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
