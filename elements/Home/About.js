@@ -10,7 +10,7 @@ import {
 import AboutImage2 from "../../assets/images/about_image2.png";
 import AboutImage3 from "../../assets/images/about_image3.png";
 import {defaultTextMargin, Heading, P, Paragraph, SubHeading, Text} from "../../components/UI/Typography";
-import {NextImage, Wave} from "../../components/UI/Images";
+import {NextImage} from "../../components/UI/Images";
 import {Center, Container, Content, Section} from "../../components/UI/Containers";
 import Roadmap from "./Roadmap";
 import classNames from "classnames";
@@ -101,8 +101,7 @@ export default function About() {
                                                             <p className={"z-20 text-gray-500 mt-0 font-medium text-lg"}>
                                                                 {each.name}
                                                             </p>
-                                                            <p className={"absolute z-10 text-sm px-6 py-6 -bottom-5 left-1/2 transform bg-bgLight -translate-x-1/2 px-3 lg:text-lg"}>
-                                                            </p>
+
                                                         </Content>
                                                     </Content>
                                                 </Content>
@@ -120,7 +119,6 @@ export default function About() {
                     </Container>
                 </Content>
             </Content>
-            <Wave className={"text-bgLight bg-white -mt-1"}/>
         </Section>
     )
 }
