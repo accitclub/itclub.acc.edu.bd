@@ -1,8 +1,7 @@
-import {Center, Column, Content, FlexColumn, FlexRow, GridResponsive, Section} from "../../components/UI/Containers";
+import {Column, Content, FlexColumn, FlexRow, GridResponsive, Section} from "../../components/UI/Containers";
 import {NextImage} from "../../components/UI/Images";
 import {IconHeading, Paragraph, ResponsiveTextLeft, Text} from "../../components/UI/Typography";
 import {FaCheckCircle, FaQuoteLeft, FaQuoteRight, FaUserFriends} from "react-icons/fa";
-import Carousel, {CarouselSlide} from "../../components/UI/Carousel";
 import {
     TESTIMONIAL_CONTENT_HEADING,
     TESTIMONIAL_CONTENT_TEXT,
@@ -10,9 +9,26 @@ import {
     TESTIMONIAL_LIST_TEXT,
     TESTIMONIALS
 } from "../../assets/data";
-import {motion} from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
+import {useEffect, useState} from "react";
 
 export default function Testimony() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    useEffect(() => {
+        let timeOut = setTimeout(() => {
+            if (currentSlide < TESTIMONIALS.length - 1) {
+                setCurrentSlide(currentSlide + 1);
+            } else {
+                setCurrentSlide(0);
+            }
+        }, 5000)
+
+        return () => {
+            clearTimeout(timeOut)
+        }
+    }, [currentSlide])
+
     return (
         <Section id={TESTIMONIAL_ID} className={"bg-bgDark -mt-2"}>
             <Content className={"container mx-auto py-16"}>
@@ -21,48 +37,57 @@ export default function Testimony() {
                         {TESTIMONIAL_CONTENT_HEADING}
                     </IconHeading>
                 </ResponsiveTextLeft>
-                <GridResponsive className={"lg:grid-cols-2 md:grid-cols-1 mt-32 gap-y-16"}>
+                <GridResponsive className={"lg:grid-cols-2 md:grid-cols-1 mt-32 gap-32"}>
                     <motion.div initial={{opacity: 0, x: -100}}
                                 whileInView={{opacity: 1, x: 0}}
                                 transition={{duration: 0.5,}}
                                 viewport={{once: true}}
                     >
-                        <Content className={""}>
-                            <Carousel className={"xl:w-9/12 sm:w-8/12 xs:w-11/12 w-full lg:mx-0 lg:mr-auto"}
-                                      navigation={false} autoplay={true} controls={false}>
+                        <Content className={"flex flex-row overflow-hidden"}>
+                            <AnimatePresence exitBeforeEnter>
                                 {TESTIMONIALS.map((item, key) => (
-                                    <CarouselSlide key={key}>
+                                    key === currentSlide &&
+                                    <motion.div
+                                        initial={{opacity: 0, x: -100, scale: 0.9}}
+                                        animate={{opacity: 1, x: 0, scale: 1}}
+                                        exit={{opacity: 0, x: 100, scale: 0.9}}
+                                        transition={{duration: 0.35}}
+                                        key={key} className={"flex-full"}>
                                         <Content className={"bg-bgLight rounded-3xl w-[95%] mx-auto"}>
                                             <Content className={"sm:py-10 p-4 sm:px-8"}>
-                                            <FlexRow className={"mb-10"}>
-                                                <Content className={"relative mr-4"}>
-                                                    <Content className={"rounded-full absolute h-full w-full -top-4 -left-4 bg-opacity-50 bg-emerald-400"}>
+                                                <FlexRow className={"mb-10"}>
+                                                    <Content className={"relative mr-4"}>
+                                                        <Content
+                                                            className={"rounded-full absolute h-full w-full -top-4 -left-4 bg-opacity-50 bg-emerald-400"}>
 
+                                                        </Content>
+                                                        <Content
+                                                            className={"h-24 w-24  overflow-hidden bg-gray-200 rounded-full"}>
+                                                            <NextImage src={item.image}/>
+                                                        </Content>
                                                     </Content>
-                                                    <Content className={"h-24 w-24  overflow-hidden bg-gray-200 rounded-full"}>
-                                                        <NextImage src={item.image}/>
+                                                    <Content>
+                                                        <p className={"text-left text-gray-900 font-medium  text-lg mt-2"}>{item.name}</p>
+                                                        <p className={"text-left text-gray-500 font-medium  text-md mt-1"}>{item.designation}</p>
                                                     </Content>
-                                                </Content>
-                                                <Content>
-                                                    <p className={"text-left text-gray-900 font-medium  text-lg mt-2"}>{item.name}</p>
-                                                    <p className={"text-left text-gray-500 font-medium  text-md mt-1"}>{item.designation}</p>
-                                                </Content>
-                                            </FlexRow >
-                                            <span className={"text-6xl text-green-400"}>
-                                                <FaQuoteLeft/>
-                                            </span>
-                                            <Paragraph className={"lg:text-lg md:text-lg text-md lg:my-10 md:my-10 sm:my-10 my-8"}>
-                                                {item.text}
-                                            </Paragraph>
-                                                <span className={"text-6xl flex flex-row-reverse text-right text-green-400"}>
-                                                <FaQuoteRight/>
-                                            </span>
+                                                </FlexRow>
+                                                <span className={"text-6xl text-yellow-400"}>
+                                                    <FaQuoteLeft/>
+                                                </span>
+                                                <Paragraph
+                                                    className={"lg:text-lg md:text-lg text-md lg:my-10 md:my-10 sm:my-10 my-8"}>
+                                                    {item.text}
+                                                </Paragraph>
+                                                <span
+                                                    className={"text-6xl flex flex-row-reverse text-right text-yellow-400"}>
+                                                    <FaQuoteRight/>
+                                                </span>
                                             </Content>
 
                                         </Content>
-                                    </CarouselSlide>
+                                    </motion.div>
                                 ))}
-                            </Carousel>
+                            </AnimatePresence>
                         </Content>
                     </motion.div>
                     <Column className={"flex flex-col"}>

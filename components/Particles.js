@@ -37,12 +37,12 @@ export const Particle = () => {
                     number: {
                         density: {
                             enable: true,
-                            area: 2000,
+                            area: 6000,
                         },
                         value: 60,
                     },
                     opacity: {
-                        value: 0.7,
+                        value: 0.3,
                     },
                     shape: {
                         type: "circle",
