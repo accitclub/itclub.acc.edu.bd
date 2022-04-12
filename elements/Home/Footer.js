@@ -1,4 +1,3 @@
-import {Wave} from "../../components/UI/Images";
 import {Column, Container, Content, GridResponsive} from "../../components/UI/Containers";
 import {Heading, Paragraph, ResponsiveTextLeft} from "../../components/UI/Typography";
 import classNames from "classnames";
@@ -8,7 +7,7 @@ import {CONTACTS, FOOTER_HEADER, FOOTER_TEXT, NAVIGATION} from "../../assets/dat
 export default function Footer() {
     return (
         <footer className={"bg-gradient-to-br from-gradientLightBlue to-gradientBlue"}>
-            <Wave className={"text-white"}/>
+
             <Container>
                 <GridResponsive className={"lg:grid-cols-3"}>
                     <Column>
