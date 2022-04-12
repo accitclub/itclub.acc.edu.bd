@@ -1,5 +1,5 @@
 // All IDS
-import {FaArtstation, FaBrain, FaCode, FaMobile, FaProjectDiagram, FaVideo} from "react-icons/fa";
+import {FaArtstation, FaBrain, FaCode, FaGamepad, FaMobile, FaProjectDiagram, FaVideo} from "react-icons/fa";
 import Image1 from "../images/image1.jpg";
 import Image2 from "../images/image2.jpg";
 import Image3 from "../images/image3.jpg";
@@ -9,6 +9,11 @@ import Image6 from "../images/image6.jpg";
 import Image7 from "../images/image7.jpg";
 import ShishirSir from "../images/shishirsir.jpg";
 import Turjoe from "../images/turjoe.jpg";
+import Code from "../images/code.png";
+import Design from "../images/design.png";
+import Website from "../images/website.png";
+import Console from "../images/console.png";
+
 
 export const HERO_ID = "hero";
 export const ABOUT_ID = "about";
@@ -88,32 +93,29 @@ export const SECTOR_LIST = [
     {
         id: 1,
         name: "Programming",
-        icon: <FaCode/>
+        icon: Code,
+        text: "Every year we try to arrange various code writing contest among students and also try to take sessions on" +
+            "programming, informatics olympiad and many more"
     },
     {
         id: 2,
         name: "Graphics Design",
-        icon: <FaArtstation/>
-    },
-    {
-        id: 3,
-        name: "Video Edit",
-        icon: <FaVideo/>
+        icon: Design,
+        text: "We have a group of talented designers, they try their best to tell unique visual stories and to design both unique and creative contents"
     },
     {
         id: 4,
-        name: "Web & App",
-        icon: <FaMobile/>
+        name: "Gaming",
+        icon: Console,
+        text: "Among every other sectors, gaming sector is the most hyped one, we have a reputation to host game tournaments among students. "
+
     },
     {
         id: 5,
-        name: "Project Display",
-        icon: <FaProjectDiagram/>
-    },
-    {
-        id: 5,
-        name: "Olympiad",
-        icon: <FaBrain/>
+        name: "Web Design",
+        icon: Design,
+        text: "Web design is one of the most vital sectors of our club, where we talk about modern technologies to build a beautiful and standard" +
+            "web application. "
     },
 ]
 
