@@ -53,13 +53,13 @@ export default function HeroComponent({
                             <AnchorButton {...yPresentMotion(0.9)}
                                           draggable={false}
                                           className={classNames("group w-56 mt-10 block lg:mx-0 mx-auto hover:-translate-y-1 ",
-                                              "border-2 border-green-400 text-emerald-300 hover:bg-emerald-500 ",
-                                              "hover:text-white bg-transparent xl:text-xl relative ",
+                                              "border-2 bg-emerald-500 ",
+                                              "text-white bg-transparent hover:bg-emerald-600 xl:text-xl relative ",
                                               "font-medium rounded-full transition-all duration-200")}
                                           href={"#" + Href}>
                                 {CTA}
                                 <span
-                                    className={"ml-2 h-4 w-4 rounded-full group-hover:bg-white bg-green-500 animate-pulse "}>
+                                    className={"ml-2 h-4 w-4 rounded-full bg-white animate-pulse "}>
                                 </span>
                             </AnchorButton>
                         </motion.div>
