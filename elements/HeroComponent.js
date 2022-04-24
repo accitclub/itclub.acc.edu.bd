@@ -54,7 +54,7 @@ export default function HeroComponent({
                                           draggable={false}
                                           className={classNames("group w-56 mt-10 block lg:mx-0 mx-auto hover:-translate-y-1 ",
                                               "border-2 bg-emerald-500 ",
-                                              "text-white bg-transparent hover:bg-emerald-600 xl:text-xl relative ",
+                                              "text-white hover:bg-emerald-600 xl:text-xl relative ",
                                               "font-medium rounded-full transition-all duration-200")}
                                           href={"#" + Href}>
                                 {CTA}
